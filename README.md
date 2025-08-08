@@ -37,10 +37,11 @@ Permitir que o usuário cadastre termos de interesse (como nomes de livros, tema
 ## Estrutura do Projeto
 
 ```plaintext
-tragp-noticias/
-├── index.html         # Página inicial (formulário de cadastro)
-├── style.css          # Estilo da página
-├── app.py             # Arquivo principal do backend (Flask)
-├── requirements.txt   # Bibliotecas do Python
-├── README.md          # Documentação do projeto
-└── /templates         # (futuramente) páginas HTML dinâmicas
+trago-noticias/
+├── app.py                
+├── templates/
+│   └── index.html       
+├── static/
+│   └── style.css    
+├── README.md
+└── .gitignore
