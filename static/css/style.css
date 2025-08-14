@@ -1,7 +1,145 @@
 body {
-    background-color: bisque;
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(36, 36, 36);
+        font-family: "Arimo", sans-serif;
+
+}
+
+a {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+mark {
+    border-bottom: 1px solid rgb(100, 148, 237);
+    background-color: transparent;
 }
 
 h1 {
-    color: red;
+    color: rgb(51, 51, 51);
+    font-family: "Homenaje", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.obrigatorio {
+    color: crimson;
+    font-weight: bold;
+}
+
+#descricao {
+    background-color: rgba(96, 152, 255);
+    color: rgb(255, 255, 255);
+    padding: 5px 15px;
+    border-radius: 15px;
+    line-height: 20px;
+    box-sizing: border-box;
+}
+
+.txtfooter {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+}
+
+#subtitulo {
+    color: rgb(92, 92, 92);
+    font-size: 20px;
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight:normal;
+}
+
+#formulario {
+    padding: 15px 15px;
+    border-radius: 15px;
+    background-color: rgb(245, 245, 245);
+    box-sizing: border-box;
+    color: rgb(75, 75, 75);
+    margin-top: 20px !important;
+}
+
+main,
+section,
+footer,
+aside,
+article,
+header {
+    margin: 30px auto;
+    width: 600px;
+}
+
+.item {
+    margin: 10px;
+}
+
+nav,
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+li {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+    background-color: rgb(164, 203, 255);
+    list-style-type: none;
+    margin: 5px;
+    align-items: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.titulomenu {
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(78, 97, 121);
+    padding-bottom: 10px;
+}
+
+.descmenu {
+    color: rgb(107, 132, 163);
+    font-size: 14px;
+}
+
+.input,
+.select {
+    background-color: rgb(236, 236, 236);
+    border: none;
+    padding: 8px;
+    border-bottom: 1px solid rgb(148, 148, 148);
+    border-radius: 5px;
+    width: 40%;
+    color: rgb(51, 51, 51);
+}
+
+.botao {
+    border: none;
+    padding: 10px;
+    background-color: rgb(65, 65, 65);
+    color: #ffffff;
+    border-radius: 5px;
+
+}
+
+.required {
+    color: crimson;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#footer {
+    margin-bottom: 30px;
 }
