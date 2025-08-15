@@ -3,43 +3,45 @@
 {% block title %} Página Inicial {% endblock %}
 
 {% block content %}
-    <article id="descricao">
-            <p>Sed pellentesque tempor risus ac laoreet. Etiam pretium maximus eleifend. Vestibulum et leo odio.
-                Curabitur metus neque, euismod et eleifend nec, dictum et odio. Nunc consequat leo nec ligula laoreet,
-                non euismod ex ullamcorper. Pellentesque eu tortor quis quam mollis placerat..</p>
-        </article>
+<h2 id="subtitulo">Saiba o que há de <mark>novo</mark> com assuntos do seu interesse!</h2>
 
-        <section id="formulario">
-            <form action="/processamento" method="post">
-                <div class="item">
-                    <label for="name">Meu nome é: <span class="obrigatorio">*</span> </label>
-                    <input type="text" id="name" class="input" name="name" placeholder="Maria" required />
-                </div>
 
-                <div class="item">
-                    <label for="assunto">Quero receber uma alerta sobre: <span class="obrigatorio">*</span> </label>
-                    <input type="text" id="assunto" class="input" name="assunto" placeholder="ex.: ProUni 2029"
-                        required />
-                </div>
-                <div class="item">
-                    <label for="email">Quero receber esse alerta pelo e-mail: <span class="obrigatorio">*</span>
-                    </label>
-                    <input type="email" id="email" class="input" name="email" placeholder="maria@email.com" required />
-                </div>
-                <div class="item">
-                    <label for="frequencia">E quero receber esse alerta: <span class="obrigatorio">*</span> </label>
-                    <select id="frequencia" name="frequencia" class="select">
-                        <option value="" selected disabled>Selecione a frequência</option>
-                        <option value="diario">Diariamente</option>
-                        <option value="semanal">Semanalmente</option>
-                        <option value="mensal">Mensalmente</option>
-                        <option value="anual">Anualmente</option>
-                    </select>
-                </div>
-                <div class="form-footer">
-                    <div class="required">* = campos obrigatórios</div>
-                    <button type="submit" class="botao">Criar alerta</button>
-                </div>
-            </form>
-        </section>
+<article id="descricao">
+    <p>Sed pellentesque tempor risus ac laoreet. Etiam pretium maximus eleifend. Vestibulum et leo odio.
+        Curabitur metus neque, euismod et eleifend nec, dictum et odio. Nunc consequat leo nec ligula laoreet,
+        non euismod ex ullamcorper. Pellentesque eu tortor quis quam mollis placerat..</p>
+</article>
+
+<section id="formulario">
+    <form action="/processamento" method="post">
+        <div class="item">
+            <label for="name">Meu nome é: <span class="obrigatorio">*</span> </label>
+            <input type="text" id="name" class="input" name="name" placeholder="Maria" required />
+        </div>
+
+        <div class="item">
+            <label for="assunto">Quero receber uma alerta sobre: <span class="obrigatorio">*</span> </label>
+            <input type="text" id="assunto" class="input" name="assunto" placeholder="ex.: ProUni 2029" required />
+        </div>
+        <div class="item">
+            <label for="email">Quero receber esse alerta pelo e-mail: <span class="obrigatorio">*</span>
+            </label>
+            <input type="email" id="email" class="input" name="email" placeholder="maria@email.com" required />
+        </div>
+        <div class="item">
+            <label for="frequencia">E quero receber esse alerta: <span class="obrigatorio">*</span> </label>
+            <select id="frequencia" name="frequencia" class="select">
+                <option value="" selected disabled>Selecione a frequência</option>
+                <option value="diario">Diariamente</option>
+                <option value="semanal">Semanalmente</option>
+                <option value="mensal">Mensalmente</option>
+                <option value="anual">Anualmente</option>
+            </select>
+        </div>
+        <div class="form-footer">
+            <div class="required">* = campos obrigatórios</div>
+            <button type="submit" class="botao">Criar alerta</button>
+        </div>
+    </form>
+</section>
 {% endblock %}

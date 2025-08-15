@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %} Como funciona {% endblock %}
+
+{%block content %}
+<h2 id="subtitulo">Como isso funciona?</h2>
+
+<section class="conteudo">
+    <p>O projeto Trago Notícias foi criado para permitir que usuários acompanhem notícias de temas específicos de forma
+        prática e automatizada. A ideia central é que o usuário informe um termo de interesse (como o título de um
+        livro, um
+        tema de estudo ou um assunto de atualidade), e o sistema monitore automaticamente a internet em busca de
+        notícias
+        relacionadas, enviando alertas sempre que novas informações forem encontradas.</p>
+
+    <h3>Passo a passo do funcionamento</h3>
+
+    <p><h4>1. Cadastro do termo de interesse</h4>
+        O usuário acessa o sistema e cadastra um termo que deseja monitorar. Esse termo pode ser qualquer palavra ou
+        expressão que descreva o assunto de interesse.</p>
+
+
+    <p><h4>2. Armazenamento do termo</h4>
+        Após o cadastro, o termo é salvo em um banco de dados. Esse banco de dados organiza todos os termos cadastrados
+        e
+        permite que o sistema faça buscas periódicas de forma eficiente.</p>
+
+
+    <p><h4>3. Busca automática por notícias</h4>
+        O sistema realiza buscas periódicas na internet, consultando sites de notícias e fontes confiáveis para
+        identificar
+        novas publicações que contenham o termo cadastrado.</p>
+
+
+    <p><h4>4. Filtragem e organização das notícias</h4>
+        As notícias encontradas são processadas, verificando duplicações e relevância, para garantir que o usuário
+        receba
+        apenas informações úteis e atualizadas sobre o tema.</p>
+
+
+    <p><h4>5. Envio de alertas</h4>
+        Sempre que uma nova notícia é encontrada, o sistema envia um alerta ao usuário, que pode ser via e-mail ou outro
+        canal definido no projeto. Dessa forma, o usuário se mantém atualizado sem precisar procurar manualmente.</p>
+
+    <h3>Benefícios do projeto</h3>
+
+    <p>Praticidade: não é necessário acessar múltiplos sites para acompanhar um tema; o sistema traz as notícias
+        diretamente.</p>
+
+    <p>Personalização: cada usuário recebe alertas sobre os temas que realmente lhe interessam.</p>
+
+    <p>Automatização: a busca e o envio de notícias são totalmente automáticos, economizando tempo e esforço.</p>
+
+    <p>Organização: as notícias são agrupadas e filtradas, evitando informações repetidas ou irrelevantes.</p>
+
+</section>
+{% endblock %}

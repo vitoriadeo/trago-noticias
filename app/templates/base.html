@@ -24,8 +24,7 @@ TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
 <body>
     <header>
         <hgroup>
-            <h1>&#128240; trago notícias</h1>
-            <h2 id="subtitulo">Saiba o que há de <mark>novo</mark> com assuntos do seu interesse!</h2>
+            <h1>trago notícias</h1>
         </hgroup>
     </header>
     <main>
@@ -34,10 +33,10 @@ TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
     <aside>
         <nav>
             <ul>
-                <a href="">
+                <a href="{{ url_for('home.about') }}">
                     <li>
                         <div class="titulomenu">Como funciona</div>
-                        <div class="descmenu">lorem ipsum dolor</div>
+                        <div class="descmenu">Entenda sobre o projeto</div>
                     </li>
                 </a>
                 <a href="">
@@ -46,16 +45,16 @@ TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
                         <div class="descmenu">lorem ipsum dolor</div>
                     </li>
                 </a>
-                <a href="">
+                <a href="{{ url_for('home.privacy') }}">
                     <li>
                         <div class="titulomenu">Uso de dados</div>
-                        <div class="descmenu">lorem ipsum dolor</div>
+                        <div class="descmenu">LGPD e política de privacidade</div>
                     </li>
                 </a>
                 <a href="">
                     <li>
                         <div class="titulomenu">Contato</div>
-                        <div class="descmenu">lorem ipsum dolor</div>
+                        <div class="descmenu">Me traga notícias!</div>
                     </li>
                 </a>
             </ul>
