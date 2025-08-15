@@ -38,10 +38,21 @@ Permitir que o usuário cadastre termos de interesse (como nomes de livros, tema
 
 ```plaintext
 trago-noticias/
-├── app.py                
-├── templates/
-│   └── index.html       
-├── static/
-│   └── style.css    
+├── app/
+│   ├── __init__.py
+│   ├── config.py
+│   ├── controllers/
+│   │   ├── __init__.py
+│   │   └── home_controller.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   └── termo.py
+│   ├── templates/
+│   │   ├── base.html
+│   │   └── index.html
+│   └── static/
+│       └── style.css
+├── run.py
+├── requirements.txt
 ├── README.md
 └── .gitignore
