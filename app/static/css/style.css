@@ -152,3 +152,10 @@ li {
 #footer {
     margin-bottom: 30px;
 }
+
+.h4_subtitles {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid #c9c9c9;
+    display: inline-block;
+}

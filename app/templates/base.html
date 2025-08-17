@@ -28,21 +28,21 @@ TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
         </hgroup>
     </header>
     <main>
-    {% block content %} {% endblock %}
+        {% block content %} {% endblock %}
     </main>
     <aside>
         <nav>
             <ul>
+                <a href="{{ url_for('home.index') }}">
+                    <li>
+                        <div class="titulomenu">Página inicial</div>
+                        <div class="descmenu">Cadastre seus alertas</div>
+                    </li>
+                </a>
                 <a href="{{ url_for('home.about') }}">
                     <li>
                         <div class="titulomenu">Como funciona</div>
                         <div class="descmenu">Entenda sobre o projeto</div>
-                    </li>
-                </a>
-                <a href="">
-                    <li>
-                        <div class="titulomenu">O projeto</div>
-                        <div class="descmenu">lorem ipsum dolor</div>
                     </li>
                 </a>
                 <a href="{{ url_for('home.privacy') }}">
@@ -51,7 +51,7 @@ TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
                         <div class="descmenu">LGPD e política de privacidade</div>
                     </li>
                 </a>
-                <a href="">
+                <a href="{{ url_for('home.contact') }}">
                     <li>
                         <div class="titulomenu">Contato</div>
                         <div class="descmenu">Me traga notícias!</div>
