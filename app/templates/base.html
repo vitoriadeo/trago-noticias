@@ -14,6 +14,7 @@ TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
         content="sistema de alertas, sistema de monitoramento de web, alertas para assuntos específicos" />
     <title>{% block title %} Trago Notícias {% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -34,27 +35,27 @@ TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
         <nav>
             <ul>
                 <a href="{{ url_for('home.index') }}">
-                    <li>
-                        <div class="titulomenu">Página inicial</div>
-                        <div class="descmenu">Cadastre seus alertas</div>
+                    <li class="{% if request.path == url_for('home.index') %} active {% endif %}">
+                        <div class="menu_title">Página inicial</div>
+                        <div class="desc_menu">Cadastre seus alertas</div>
                     </li>
                 </a>
                 <a href="{{ url_for('home.about') }}">
-                    <li>
-                        <div class="titulomenu">Como funciona</div>
-                        <div class="descmenu">Entenda sobre o projeto</div>
+                    <li class="{% if request.path == url_for('home.about') %} active {% endif %}">
+                        <div class="menu_title">Como funciona</div>
+                        <div class="desc_menu">Entenda sobre o projeto</div>
                     </li>
                 </a>
                 <a href="{{ url_for('home.privacy') }}">
-                    <li>
-                        <div class="titulomenu">Uso de dados</div>
-                        <div class="descmenu">LGPD e política de privacidade</div>
+                    <li class="{% if request.path == url_for('home.privacy') %} active {% endif %}">
+                        <div class="menu_title">Uso de dados</div>
+                        <div class="desc_menu">LGPD e política de privacidade</div>
                     </li>
                 </a>
                 <a href="{{ url_for('home.contact') }}">
-                    <li>
-                        <div class="titulomenu">Contato</div>
-                        <div class="descmenu">Me traga notícias!</div>
+                    <li class="{% if request.path == url_for('home.contact') %} active {% endif %}">
+                        <div class="menu_title">Contato</div>
+                        <div class="desc_menu">Me traga notícias!</div>
                     </li>
                 </a>
             </ul>

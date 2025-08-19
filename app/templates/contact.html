@@ -3,32 +3,13 @@
 {% block title %} Contato {% endblock %}
 
 {% block content %}
-<h2 id="subtitulo">Entre em contato</h2>
+<h2 id="subtitle">Entre em contato</h2>
 
-<section class="conteudo">
-    <p>Você pode mandar um email para vitoriadeo@yahoo.com ou usar o formulário abaixo. </p>
-
-    <form>
-        <div class="item">
-            <label for="name">Seu nome: </label>
-            <input type="text" id="name" class="input" required />
-        </div>
-
-        <div class="item">
-            <label for="email">Seu e-mail: </label>
-            <input type="email" id="email" class="input" required />
-        </div>
-
-        <div class="item">
-            <label for="subject">Assunto: </label>
-            <input type="text" id="subject" class="input" required />
-        </div>
-
-        <div class="item">
-            <label for="msn">Mensagem: </label>
-            <textarea id="msn"></textarea>
-        </div>
-    </form>
-
+<section class="content">
+    <p>Para dúvidas, sugestões ou parcerias, envie um e-mail para <a href="mailto:vitoriadeo@yahoo.com">vitoriadeo@yahoo.com</a></p>
+    <p>Consulte nossa política de privacidade <a href="{{ url_for('home.privacy') }}">aqui.</a></p>
+    <h4 class="h4_subtitles">Redes sociais</h4>
+    <p>LinkedIn, <a href="https://www.linkedin.com/in/vitoriadeo">aqui.</a></p>
+    <p>GitHub, <a href="https://github.com/vio1995">aqui.</a></p>
 </section>
 {% endblock %}

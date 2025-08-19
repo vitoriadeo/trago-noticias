@@ -1,9 +1,13 @@
+/*   STYLE.CSS - Estilização geral do site web 
+     Organização em tags > classes > ids
+*/
+
+
 body {
     background-color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(36, 36, 36);
         font-family: "Arimo", sans-serif;
-
 }
 
 a {
@@ -22,66 +26,6 @@ h1 {
     font-weight: 400;
     font-style: normal;
     font-size: 60px;
-}
-
-.obrigatorio {
-    color: crimson;
-    font-weight: bold;
-}
-
-#descricao {
-    background-color: rgba(96, 152, 255);
-    color: rgb(255, 255, 255);
-    padding: 5px 15px;
-    border-radius: 15px;
-    line-height: 20px;
-    box-sizing: border-box;
-}
-
-.txtfooter {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: right;
-}
-
-#subtitulo {
-    color: rgb(92, 92, 92);
-    font-size: 20px;
-    font-family: "Arimo", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight:normal;
-}
-
-#formulario {
-    padding: 15px 15px;
-    border-radius: 15px;
-    background-color: rgb(245, 245, 245);
-    box-sizing: border-box;
-    color: rgb(75, 75, 75);
-    margin-top: 20px !important;
-}
-
-.conteudo {
-    padding: 5px 25px;
-    border-radius: 15px;
-    background-color: rgb(245, 245, 245);
-    box-sizing: border-box;
-    color: rgb(75, 75, 75);
-    line-height: 24px;
-}
-
-main,
-section,
-footer,
-aside,
-article,
-header {
-    margin: 30px auto;
-    width: 600px;
-}
-
-.item {
-    margin: 10px;
 }
 
 nav,
@@ -106,14 +50,48 @@ li {
     padding: 15px;
 }
 
-.titulomenu {
+main,
+section,
+footer,
+aside,
+article,
+header {
+    margin: 30px auto;
+    width: 600px;
+}
+
+nav li.active {
+    background-color: rgb(233, 233, 233);
+}
+
+
+
+.txtfooter {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+}
+
+.content {
+    padding: 5px 25px;
+    border-radius: 15px;
+    background-color: rgb(245, 245, 245);
+    box-sizing: border-box;
+    color: rgb(75, 75, 75);
+    line-height: 24px;
+}
+
+.item {
+    margin: 10px;
+}
+
+.menu_title {
     font-weight: bolder;
     font-size: 20px;
     color: rgb(78, 97, 121);
     padding-bottom: 10px;
 }
 
-.descmenu {
+.desc_menu {
     color: rgb(107, 132, 163);
     font-size: 14px;
 }
@@ -129,7 +107,7 @@ li {
     color: rgb(51, 51, 51);
 }
 
-.botao {
+.button {
     border: none;
     padding: 10px;
     background-color: rgb(65, 65, 65);
@@ -142,6 +120,15 @@ li {
     color: crimson;
 }
 
+
+
+.h4_subtitles {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid #c9c9c9;
+    display: inline-block;
+}
+
 .form-footer {
     display: flex;
     justify-content: space-between;
@@ -149,13 +136,33 @@ li {
     margin-top: 10px;
 }
 
-#footer {
-    margin-bottom: 30px;
+#description {
+    background-color: rgba(96, 152, 255);
+    color: rgb(255, 255, 255);
+    padding: 5px 15px;
+    border-radius: 15px;
+    line-height: 20px;
+    box-sizing: border-box;
 }
 
-.h4_subtitles {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: 1px solid #c9c9c9;
-    display: inline-block;
+#subtitle {
+    color: rgb(92, 92, 92);
+    font-size: 20px;
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight:normal;
+}
+
+#form_area {
+    padding: 15px 15px;
+    border-radius: 15px;
+    background-color: rgb(245, 245, 245);
+    box-sizing: border-box;
+    color: rgb(75, 75, 75);
+    margin-top: 20px !important;
+}
+
+#footer {
+    margin-bottom: 30px;
 }
