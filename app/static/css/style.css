@@ -31,6 +31,7 @@ h1 {
     font-size: 60px;
 }
 
+/* === MENU DESKTOP === */
 nav,
 ul {
     display: flex;
@@ -53,6 +54,23 @@ li {
     padding: 15px;
 }
 
+.menu_title {
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(78, 97, 121);
+    padding-bottom: 10px;
+}
+
+.desc_menu {
+    color: rgb(107, 132, 163);
+    font-size: 14px;
+}
+
+nav li.active {
+    background-color: rgb(233, 233, 233);
+}
+
+
 main,
 section,
 footer,
@@ -62,12 +80,6 @@ header {
     margin: 30px auto;
     width: 600px;
 }
-
-nav li.active {
-    background-color: rgb(233, 233, 233);
-}
-
-
 
 .txtfooter {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -85,18 +97,6 @@ nav li.active {
 
 .item {
     margin: 10px;
-}
-
-.menu_title {
-    font-weight: bolder;
-    font-size: 20px;
-    color: rgb(78, 97, 121);
-    padding-bottom: 10px;
-}
-
-.desc_menu {
-    color: rgb(107, 132, 163);
-    font-size: 14px;
 }
 
 .input,
@@ -122,8 +122,6 @@ nav li.active {
 .required {
     color: crimson;
 }
-
-
 
 .h4_subtitles {
     margin-bottom: 0;
@@ -168,4 +166,114 @@ nav li.active {
 
 #footer {
     margin-bottom: 30px;
+}
+
+/* === MENU MOBILE === */
+
+.menu-mobile {
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Container do botão do menu */
+.menu-button-container {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.menu-button {
+    background-color: #333;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.menu-button::before,
+.menu-button::after {
+    background-color: #333;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-button::before {
+    top: -10px;
+}
+
+.menu-button::after {
+    top: 10px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    transform: rotate(45deg);
+    top: 0;
+    background-color: #FFFFFF;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    transform: rotate(-45deg);
+    top: 0;
+    background-color: #FFFFFF;
+}
+
+/* Estilos da lista de links (o menu que aparece) */
+.menu-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.966);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.menu-list li {
+    margin: 0;
+    width: 100%;
+    height: 18%;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    flex: 0;
+}
+
+.menu-list a {
+    padding: 25px 15px 5px 15px;
+    display: inline-block;
+    border-bottom: 1px solid #ffffff2f;
+    font-size: 2rem;
+    color: #FFFFFF;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#menu-toggle:checked~.menu-list {
+    transform: translateX(0);
 }

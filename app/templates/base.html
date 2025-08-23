@@ -33,36 +33,52 @@ TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
     <main>
         {% block content %} {% endblock %}
     </main>
-    <aside>
-        <nav>
-            <ul>
+
+<aside>
+    <nav class="menu-desktop">
+        <ul>
+            <li class="{% if request.path == url_for('home.index') %} active {% endif %}">
                 <a href="{{ url_for('home.index') }}">
-                    <li class="{% if request.path == url_for('home.index') %} active {% endif %}">
-                        <div class="menu_title">Página inicial</div>
-                        <div class="desc_menu">Cadastre seus alertas</div>
-                    </li>
+                    <div class="menu_title">Página inicial</div>
+                    <div class="desc_menu">Cadastre seus alertas</div>
                 </a>
+            </li>
+            <li class="{% if request.path == url_for('home.about') %} active {% endif %}">
                 <a href="{{ url_for('home.about') }}">
-                    <li class="{% if request.path == url_for('home.about') %} active {% endif %}">
-                        <div class="menu_title">Como funciona</div>
-                        <div class="desc_menu">Entenda sobre o projeto</div>
-                    </li>
+                    <div class="menu_title">Como funciona</div>
+                    <div class="desc_menu">Entenda sobre o projeto</div>
                 </a>
+            </li>
+            <li class="{% if request.path == url_for('home.privacy') %} active {% endif %}">
                 <a href="{{ url_for('home.privacy') }}">
-                    <li class="{% if request.path == url_for('home.privacy') %} active {% endif %}">
-                        <div class="menu_title">Uso de dados</div>
-                        <div class="desc_menu">LGPD e política de privacidade</div>
-                    </li>
+                    <div class="menu_title">Uso de dados</div>
+                    <div class="desc_menu">LGPD e política de privacidade</div>
                 </a>
+            </li>
+            <li class="{% if request.path == url_for('home.contact') %} active {% endif %}">
                 <a href="{{ url_for('home.contact') }}">
-                    <li class="{% if request.path == url_for('home.contact') %} active {% endif %}">
-                        <div class="menu_title">Contato</div>
-                        <div class="desc_menu">Me traga notícias!</div>
-                    </li>
+                    <div class="menu_title">Contato</div>
+                    <div class="desc_menu">Me traga notícias!</div>
                 </a>
-            </ul>
-        </nav>
-    </aside>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="menu-mobile">
+        <input id="menu-toggle" type="checkbox" />
+        
+        <label class="menu-button-container" for="menu-toggle">
+            <div class="menu-button"></div>
+        </label>
+        
+        <ul class="menu-list">
+            <li><a href="{{ url_for('home.index') }}">Página inicial</a></li>
+            <li><a href="{{ url_for('home.about') }}">Como funciona</a></li>
+            <li><a href="{{ url_for('home.privacy') }}">Uso de dados</a></li>
+            <li><a href="{{ url_for('home.contact') }}">Contato</a></li>
+        </ul>
+    </div>
+</aside>
 
     <footer id="footer">
         <p class="txtfooter"><mark>Desenvolvido por <a href="https://github.com/vitoriadeo" target="_blank"
