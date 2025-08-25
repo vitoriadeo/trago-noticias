@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: trago-noticias
+    runtime: python
+    repo: https://github.com/vitoriadeo/trago-noticias
+    branch: main
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn run:app"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.7
+      - key: SUPABASE_URL
+        fromService:
+          type: web
+          name: trago-noticias
+          envVarKey: SUPABASE_URL
+      - key: SUPABASE_KEY
+        fromService:
+          type: web
+          name: trago-noticias
+          envVarKey: SUPABASE_KEY
