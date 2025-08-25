@@ -1,7 +1,5 @@
 # Trago Notícias 📰
 
-![Render Deploy Status](https://api.render.com/deploy/github/vitoriadeo/trago-noticias/badge.svg)
-
 Um projeto web que busca notícias na internet com base nos termos de interesse cadastrados pelo usuário e envia notificações por e-mail.
 
 ---
