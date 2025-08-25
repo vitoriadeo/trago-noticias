@@ -1,43 +1,100 @@
-# Trago Notícias 🗞️
-Esse é um sistema web para monitorar notícias com base em termos de interesse cadastrados por usuários. Quando uma nova notícia for encontrada, o sistema envia um e-mail de notificação automaticamente.
+# Trago Notícias 📰
 
-## Objetivo
-Permitir que o usuário cadastre termos de interesse (como nomes de livros, temas, séries, eventos etc.) e receba notificações por e-mail sempre que uma nova notícia relacionada for encontrada na internet.
+![Render Deploy Status](https://api.render.com/deploy/github/vitoriadeo/trago-noticias/badge.svg)
 
-## Tecnologias Utilizadas
-| Etapa | Tecnologia |
-|-------|------------|
-| Interface | HTML5, CSS3 |
-| Backend | Python, Flask |
-| Banco de dados | Supabase |
-| Notificações | smtplib (envio de e-mail) |
-| Automatização | schedule ou cron |
+Um projeto web que busca notícias na internet com base nos termos de interesse cadastrados pelo usuário e envia notificações por e-mail.
 
-## Funcionalidades (previstas)
-- Cadastro de termos de interesse
-- Armazenamento em banco de dados
-- Busca automática para notícias na internet
-- Envio de notificações por e-mail
-- Interface web simples para o usuário
+---
 
-## Etapas do projeto
+### Acesso ao Projeto
 
-| Nº  | Etapa                         | Status | Informações adicionais                   |
-|:----|:------------------------------|:------:|:-----------------------------------------|
-| 1   | Interface com HTML/CSS        |   🚧   | Trabalhando na parte responsiva do site. |
-| 2   | Backend em Python com Flask   |   ⬜   |                                          |
-| 3   | Banco de dados com Supabase   |   ⬜   |                                          |
-| 4   | Busca automática de notícias  |   ⬜   |                                          |
-| 5   | Envio de e-mails              |   ⬜   |                                          |
-| 6   | Automação diária              |   ⬜   |                                          |
+Você pode acessar a versão ao vivo da aplicação clicando no link abaixo:
 
-- Legenda:
-🚧 - Em progresso / 
-✅ - Concluído / 
-⬜ - Pendente / 
+**[https://trago-noticias.onrender.com](https://trago-noticias.onrender.com)**
 
+---
 
-## Estrutura do Projeto
+### Funcionalidades
+
+- [ ] Cadastro de termos de interesse pelo usuário.
+- [ ] Armazenamento dos termos em um banco de dados seguro.
+- [ ] Rotina automática para buscar notícias na internet relacionadas aos termos.
+- [ ] Envio de notificações por e-mail com as notícias encontradas.
+- [ ] Interface web simples e responsiva para interação.
+
+---
+
+### Tecnologias Utilizadas
+
+Este projeto foi construído utilizando as seguintes tecnologias e plataformas:
+
+* **Backend:**
+    * ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+    * ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+    * Gunicorn (Servidor de Produção)
+* **Frontend:**
+    * HTML5 & CSS3
+* **Banco de Dados & Infraestrutura:**
+    * ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white) (Banco de Dados PostgreSQL)
+    * ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white) (Hospedagem da Aplicação e Cron Jobs)
+
+---
+
+### Roadmap do Projeto
+
+Acompanhe o status de desenvolvimento de cada etapa do projeto.
+
+| Nº  | Etapa                         | Status | Informações Adicionais            |
+|:----|:------------------------------|:------:|:----------------------------------|
+| 1   | Interface com HTML/CSS        |   ✅   | Feito deploy no Render. Interface pronta.  |
+| 2   | Backend em Python com Flask   |   ⬜   |                                   |
+| 3   | Banco de dados com Supabase   |   ⬜   |                                   |
+| 4   | Busca automática de notícias  |   ⬜   |                                   |
+| 5   | Envio de e-mails              |   ⬜   |                                   |
+| 6   | Automação diária (Cron Job)   |   ⬜   |                                   |
+
+*Legenda: 🚧 - Em progresso / ✅ - Concluído / ⬜ - Pendente*
+
+---
+
+### Como Rodar o Projeto Localmente
+
+Para executar este projeto no seu ambiente de desenvolvimento, siga os passos abaixo:
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/vitoriadeo/trago-noticias.git](https://github.com/vitoriadeo/trago-noticias.git)
+    cd trago-noticias
+    ```
+
+2.  **Crie e ative um ambiente virtual:**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # No Windows, use `venv\Scripts\activate`
+    ```
+
+3.  **Instale as dependências:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Configure as variáveis de ambiente:**
+    * Crie um arquivo chamado `.env` na raiz do projeto.
+    * Adicione as seguintes variáveis com suas próprias chaves de um projeto Supabase:
+        ```
+        SUPABASE_URL="sua_url_do_supabase"
+        SUPABASE_KEY="sua_chave_do_supabase"
+        ```
+
+5.  **Execute a aplicação:**
+    ```bash
+    python run.py
+    ```
+---
+
+<details>
+<summary>Estrutura de Pastas do Projeto</summary>
+
 ```plaintext
 trago-noticias/
 ├── app/
@@ -63,3 +120,20 @@ trago-noticias/
 ├── .cz.toml
 ├── README.md
 └── .gitignore
+```
+</details> 
+
+---
+
+### Licença
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+### Autor
+
+Desenvolvido por Vitória de Oliveira. Entre em contato!
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vitoriadeo/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/vitoriadeo)
