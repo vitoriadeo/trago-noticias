@@ -1,10 +1,7 @@
 /* RESPONSIVE.CSS - Adições e ajustes para outros tipos de tela */
 
-/*CELULARES */
+/* CELULARES */
 @media (max-width: 480px) {
-    body {
-        font-size: .5em;
-    }
 
     html,
     body {
@@ -14,23 +11,26 @@
         height: 100%;
     }
 
-    h1,
-    #subtitle {
+    h1 {
+        font-size: 5.5rem;
         text-align: center;
-        font-size: 9em;
-        margin: 60px;
+        margin: 60px auto;
     }
 
     #subtitle {
-        font-size: 3.5em;
+        font-size: 2rem;
+        margin: 60px;
+        text-align: center;
+
     }
 
     #description {
         width: 100%;
         border-radius: 0;
-        font-size: 3.2em;
-        padding: 15px 20px;
+        font-size: 1.7rem;
+        padding: 5px 20px;
         line-height: 1.3em;
+        text-align: justify;
     }
 
     #form_area {
@@ -44,7 +44,7 @@
     input,
     select {
         display: block;
-        font-size: 3.2em;
+        font-size: 1.8rem;
     }
 
     .item {
@@ -54,7 +54,7 @@
     .input,
     .select {
         width: 95%;
-        font-size: 3.2em;
+        font-size: 1.8rem;
         margin-top: 20px;
     }
 
@@ -65,58 +65,146 @@
 
     .button {
         width: 35%;
-        font-size: 3.2em;
+        font-size: 2rem;
         border-radius: 20px;
     }
 
     .txtfooter {
         text-align: center;
         padding-bottom: 40px;
-        font-family: "Pixelify Sans", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
-        font-size: 3.2em;
+        font-size: 1.6rem;
         border: none;
     }
 
     #footer {
-        padding: 10px 0px 0px 0px;
+        padding: 10px 20px 0px 20px;
         background-color: rgb(245, 245, 245);
         box-sizing: border-box;
         color: rgb(75, 75, 75);
     }
 
     .required-txt {
-        font-size: 3em;
+        font-size: 1.5rem;
         margin-left: 25px;
         color: crimson
     }
 
     option {
-        font-size: .8em;
+        font-size: 1.2rem;
     }
 
-/* === ESTILOS PARA MOBILE (Telas com largura máxima de 767px) === */
-@media (max-width: 767px) {
-    /* Escondemos o menu de desktop */
     .menu-desktop {
         display: none;
     }
 
-    /* Mostramos o menu mobile (que escondemos por padrão no style.css) */
     .menu-mobile {
-        display: block; /* Ou 'flex', dependendo do que precisar */
+        display: block;
     }
 }
 
-/* === ESTILOS PARA DESKTOP (Telas com largura mínima de 768px) === */
-@media (min-width: 768px) {
-    .menu-mobile {
+@media (min-width: 481px) and (max-width: 600px) {
+
+    .menu-desktop {
         display: none;
     }
 
-    .menu-desktop {
-        display: block; 
+    .menu-mobile {
+        display: block;
     }
-}}
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #description {
+        width: 100%;
+        border-radius: 0;
+        font-size: 1.3rem;
+        padding: 5px 20px;
+        line-height: 1.3em;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 4.5rem;
+        margin: 60px;
+    }
+
+    #subtitle {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 50px;
+    }
+
+    #form_area {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        padding: 25px 20px;
+        font-size: 1.6rem;
+    }
+
+    input,
+    select {
+        display: block;
+        font-size: 1.6rem;
+    }
+
+    .item {
+        margin-bottom: 50px;
+    }
+
+    .input,
+    .select {
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    option {
+        font-size: 1.5rem;
+    }
+
+    .button {
+        width: 35%;
+        font-size: 1.6rem;
+        border-radius: 20px;
+    }
+
+    .required-txt {
+        font-size: 1.5rem;
+        margin-left: 15px;
+        color: crimson
+    }
+
+    .txtfooter {
+        text-align: center;
+        padding-bottom: 40px;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.5rem;
+        border: none;
+    }
+
+    #footer {
+        padding: 10px 20px 0px 20px;
+        background-color: rgb(245, 245, 245);
+        box-sizing: border-box;
+        color: rgb(75, 75, 75);
+    }
+}
+
+@media (min-width: 601px) {
+
+    h1,
+    #subtitle {
+        text-align: center;
+    }
+}
