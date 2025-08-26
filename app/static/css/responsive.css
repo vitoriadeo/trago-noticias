@@ -11,7 +11,7 @@
     }
 
     h1 {
-        font-size: 4rem;
+        font-size: 3.6rem;
         text-align: center;
         line-height: 8rem;
         margin: 60px 0 -10px 0;
@@ -19,7 +19,7 @@
     }
 
     #subtitle {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         margin: 10px;
         text-align: center;
 
@@ -28,7 +28,7 @@
     #description {
         width: 100%;
         border-radius: 0;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         padding: 5px 20px;
         line-height: 1.3em;
         text-align: justify;
@@ -45,7 +45,7 @@
     input,
     select {
         display: block;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 
     .item {
@@ -55,7 +55,7 @@
     .input,
     .select {
         width: 95%;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         margin-top: 20px;
     }
 
@@ -76,13 +76,12 @@
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
-        font-size: 1.2rem;
+        font-size: 1rem;
         border: none;
     }
 
     #footer {
         padding: 10px 20px 0px 20px;
-        background-color: rgb(245, 245, 245);
         box-sizing: border-box;
         color: rgb(75, 75, 75);
     }
@@ -107,8 +106,8 @@
     }
 
     .content {
-        font-size: 1.3rem;
-        line-height: 1.7rem;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
     }
 }
 
