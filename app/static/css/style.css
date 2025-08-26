@@ -1,5 +1,4 @@
 /*   STYLE.CSS - Estilização geral do site web 
-     Organização em tags > classes > ids
 */
 
 
@@ -71,7 +70,6 @@ nav li.active {
     background-color: rgb(233, 233, 233);
 }
 
-
 main,
 section,
 footer,
@@ -79,7 +77,8 @@ aside,
 article,
 header {
     margin: 30px auto;
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
 }
 
 .txtfooter {

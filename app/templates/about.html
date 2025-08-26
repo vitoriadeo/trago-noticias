@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %} Como funciona {% endblock %}
+{% block title %} {{ super() }} - Como funciona {% endblock %}
 
 {%block content %}
 <h2 id="subtitle">Como isso funciona?</h2>
@@ -12,36 +12,41 @@
         tema de estudo ou um assunto de atualidade), e o sistema monitore automaticamente a internet em busca de
         notícias
         relacionadas, enviando alertas sempre que novas informações forem encontradas.</p>
-
+    <p> </p>
     <h3>Passo a passo do funcionamento</h3>
 
-    <p><h4>1. Cadastro do termo de interesse</h4>
-        O usuário acessa o sistema e cadastra um termo que deseja monitorar. Esse termo pode ser qualquer palavra ou
-        expressão que descreva o assunto de interesse.</p>
+    <p>
+    <h4>1. Cadastro do termo de interesse</h4>
+    O usuário acessa o sistema e cadastra um termo que deseja monitorar. Esse termo pode ser qualquer palavra ou
+    expressão que descreva o assunto de interesse.</p>
 
 
-    <p><h4>2. Armazenamento do termo</h4>
-        Após o cadastro, o termo é salvo em um banco de dados. Esse banco de dados organiza todos os termos cadastrados
-        e
-        permite que o sistema faça buscas periódicas de forma eficiente.</p>
+    <p>
+    <h4>2. Armazenamento do termo</h4>
+    Após o cadastro, o termo é salvo em um banco de dados. Esse banco de dados organiza todos os termos cadastrados
+    e
+    permite que o sistema faça buscas periódicas de forma eficiente.</p>
 
 
-    <p><h4>3. Busca automática por notícias</h4>
-        O sistema realiza buscas periódicas na internet, consultando sites de notícias e fontes confiáveis para
-        identificar
-        novas publicações que contenham o termo cadastrado.</p>
+    <p>
+    <h4>3. Busca automática por notícias</h4>
+    O sistema realiza buscas periódicas na internet, consultando sites de notícias e fontes confiáveis para
+    identificar
+    novas publicações que contenham o termo cadastrado.</p>
 
 
-    <p><h4>4. Filtragem e organização das notícias</h4>
-        As notícias encontradas são processadas, verificando duplicações e relevância, para garantir que o usuário
-        receba
-        apenas informações úteis e atualizadas sobre o tema.</p>
+    <p>
+    <h4>4. Filtragem e organização das notícias</h4>
+    As notícias encontradas são processadas, verificando duplicações e relevância, para garantir que o usuário
+    receba
+    apenas informações úteis e atualizadas sobre o tema.</p>
 
 
-    <p><h4>5. Envio de alertas</h4>
-        Sempre que uma nova notícia é encontrada, o sistema envia um alerta ao usuário, que pode ser via e-mail ou outro
-        canal definido no projeto. Dessa forma, o usuário se mantém atualizado sem precisar procurar manualmente.</p>
-
+    <p>
+    <h4>5. Envio de alertas</h4>
+    Sempre que uma nova notícia é encontrada, o sistema envia um alerta ao usuário, que pode ser via e-mail ou outro
+    canal definido no projeto. Dessa forma, o usuário se mantém atualizado sem precisar procurar manualmente.</p>
+    <p> </p>
     <h3>Benefícios do projeto</h3>
 
     <p>Praticidade: não é necessário acessar múltiplos sites para acompanhar um tema; o sistema traz as notícias
