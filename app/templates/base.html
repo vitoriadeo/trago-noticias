@@ -1,7 +1,5 @@
 <!--TEMPLATES/HOME.HTML-->
 <!-- 
-TODO: Confirmação: uma mensagem para confirmar que o alerta foi criado com sucesso? Pode ser uma página ou um aviso no mesmo lugar.
-TODO: Segurança: CAPTCHA
 TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
 -->
 <!DOCTYPE html>
@@ -86,9 +84,32 @@ TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
     </aside>
 
     <footer id="footer">
-        <p class="txtfooter"><mark>Desenvolvido por <a href="https://github.com/vitoriadeo" target="_blank"
-                    title="Github">@vitoriadeo</a></mark></p>
+        <p class="advice-google">This site is protected by reCAPTCHA and the Google
+            <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+            <a href="https://policies.google.com/terms">Terms of Service</a> apply.
+        </p>
+
+        <p class="txtfooter">Desenvolvido por <a href="https://github.com/vitoriadeo" target="_blank"
+                    title="Github">@vitoriadeo</a></p>
     </footer>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lc6JrYrAAAAAARpiQiQ_IfaPIr33Xjkws9JUMDM"></script>
+    <script>
+        document.getElementById('form_alerts').addEventListener('submit', function (event) {
+
+            event.preventDefault();
+
+            var form = this;
+
+            grecaptcha.ready(function () {
+                grecaptcha.execute('6Lc6JrYrAAAAAARpiQiQ_IfaPIr33Xjkws9JUMDM', { action: 'submit' }).then(function (token) {
+
+                    document.getElementById('recaptcha-response').value = token;
+
+                    form.submit();
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

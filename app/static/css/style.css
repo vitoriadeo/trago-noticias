@@ -83,6 +83,7 @@ header {
 
 .txtfooter {
     text-align: center;
+    color: #9b9b9b;
 }
 
 .content {
@@ -275,4 +276,29 @@ header {
 
 #menu-toggle:checked~.menu-list {
     transform: translateX(0);
+}
+
+.confirmation {
+    background-color: #c2ee98;
+    border: 1px solid #aad681;
+    color: #40552d;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.error {
+    background-color: #ee9898;
+    border: 1px solid #d68181;
+    color: #552d2d;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.advice-google {
+    color: #9b9b9b;
+    text-align: center;
 }

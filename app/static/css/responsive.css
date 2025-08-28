@@ -92,7 +92,8 @@
         color: crimson
     }
 
-    option, .option {
+    option,
+    .option {
         font-size: 1.2rem;
         color: rgb(51, 51, 51);
     }
@@ -109,6 +110,9 @@
         font-size: 1.2rem;
         line-height: 1.6rem;
     }
+
+    .grecaptcha-badge { visibility: hidden; }
+
 }
 
 @media (min-width: 481px) and (max-width: 600px) {
@@ -206,11 +210,12 @@
         color: rgb(75, 75, 75);
     }
 
-    
+
     .content {
         font-size: 1.3rem;
         line-height: 1.7rem;
     }
+
 }
 
 @media (min-width: 601px) {

@@ -6,20 +6,22 @@
 <h2 id="subtitle">Saiba o que há de <mark>novo</mark> com assuntos do seu interesse!</h2>
 
 <article id="description">
-    <p>Monitoramos a web em busca de notícias sobre os assuntos que mais te interessam. Basta cadastrar um termo de busca e você receberá as novidades diretamente no seu e-mail, de forma prática e organizada.
+    <p>Monitoramos a web em busca de notícias sobre os assuntos que mais te interessam. Basta cadastrar um termo de
+        busca e você receberá as novidades diretamente no seu e-mail, de forma prática e organizada.
     </p>
 </article>
 
 <section id="form_area">
-    <form action="/processamento" method="post">
+    <form id="form_alerts" action="/cadastrar" method="POST">
+        <input type="hidden" id="recaptcha-response" name="recaptcha-response">
         <div class="item">
             <label for="name">Seu nome: <span class="required">*</span> </label>
             <input type="text" id="name" class="input" name="name" placeholder="Maria" required />
         </div>
 
         <div class="item">
-            <label for="assunto">Termo: <span class="required">*</span> </label>
-            <input type="text" id="assunto" class="input" name="assunto" placeholder="ex.: ProUni 2029" required />
+            <label for="termo">Termo: <span class="required">*</span> </label>
+            <input type="text" id="termo" class="input" name="termo" placeholder="ex.: ProUni 2029" required />
         </div>
         <div class="item">
             <label for="email">Endereço de e-mail: <span class="required">*</span>
@@ -40,6 +42,17 @@
             <div class="required-txt">(*) Campos obrigatórios</div>
             <button type="submit" class="button">Criar alerta</button>
         </div>
+
+        {% if status == 'sucesso' %}
+        <div class="confirmation">
+            <p>✅️ {{mensagem}}</p>
+        </div>
+        {% elif status == 'falha' %}
+        <div class="error">
+            <p>❌ {{mensagem}}</p>
+        </div>
+        {% endif %}
+
     </form>
 </section>
 {% endblock %}
