@@ -23,6 +23,9 @@ def cadastrar():
         response = requests.post(verification_url, data=payload)
         result = response.json()
 
+        print("Resposta do Google reCAPTCHA:", response, result)
+
+
         name = request.form["name"]
         termo = request.form["termo"]
         email = request.form["email"]
