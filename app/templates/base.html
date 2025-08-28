@@ -92,7 +92,7 @@ TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
         <p class="txtfooter">Desenvolvido por <a href="https://github.com/vitoriadeo" target="_blank"
                     title="Github">@vitoriadeo</a></p>
     </footer>
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lc6JrYrAAAAAARpiQiQ_IfaPIr33Xjkws9JUMDM"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LduMrYrAAAAABEA8pbsWLcQvKSg5UUvtPZtBRER"></script>
     <script>
         document.getElementById('form_alerts').addEventListener('submit', function (event) {
 
@@ -101,7 +101,7 @@ TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
             var form = this;
 
             grecaptcha.ready(function () {
-                grecaptcha.execute('6Lc6JrYrAAAAAARpiQiQ_IfaPIr33Xjkws9JUMDM', { action: 'submit' }).then(function (token) {
+                grecaptcha.execute('6LduMrYrAAAAABEA8pbsWLcQvKSg5UUvtPZtBRER', { action: 'submit' }).then(function (token) {
 
                     document.getElementById('recaptcha-response').value = token;
 
