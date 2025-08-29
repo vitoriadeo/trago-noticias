@@ -119,7 +119,8 @@ header {
 
 }
 
-.required, .required-txt {
+.required,
+.required-txt {
     color: crimson;
 }
 
@@ -301,4 +302,8 @@ header {
 .advice-google {
     color: #9b9b9b;
     text-align: center;
+}
+
+.grecaptcha-badge {
+    visibility: visible
 }
