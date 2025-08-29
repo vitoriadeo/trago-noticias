@@ -12,31 +12,29 @@
 </article>
 
 <section id="form_area">
-    <form id="form_alerts" action="/cadastrar" method="POST">
+    <form id="form_alerts" action="/" method="POST">
+        {{ form.csrf_token }}
         <input type="hidden" id="recaptcha-response" name="recaptcha-response">
         <div class="item">
-            <label for="name">Seu nome: <span class="required">*</span> </label>
-            <input type="text" id="name" class="input" name="name" placeholder="Maria" required />
+            {{form.name.label}}
+            <span class="required">*</span>
+            {{form.name(class='input')}}
         </div>
 
         <div class="item">
-            <label for="termo">Termo: <span class="required">*</span> </label>
-            <input type="text" id="termo" class="input" name="termo" placeholder="ex.: ProUni 2029" required />
+            {{form.word.label}}
+            <span class="required">*</span>
+            {{form.word(class='input', placeholder='ex.: série os testamentos')}}
         </div>
         <div class="item">
-            <label for="email">Endereço de e-mail: <span class="required">*</span>
-            </label>
-            <input type="email" id="email" class="input" name="email" placeholder="maria@email.com" required />
+            {{form.email.label}}
+            <span class="required">*</span>
+            {{form.email(class='input')}}
         </div>
         <div class="item">
-            <label for="frequencia">Frequência: <span class="required">*</span> </label>
-            <select id="frequencia" name="frequencia" class="select">
-                <option class="option" value="" selected disabled>Selecione a frequência</option>
-                <option class="option" value="diario">Diariamente</option>
-                <option class="option" value="semanal">Semanalmente</option>
-                <option class="option" value="mensal">Mensalmente</option>
-                <option class="option" value="anual">Anualmente</option>
-            </select>
+            {{form.frequency.label}}
+            <span class="required">*</span> 
+            {{form.frequency(class='select')}}
         </div>
         <div class="form-footer">
             <div class="required-txt">(*) Campos obrigatórios</div>
