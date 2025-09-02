@@ -111,10 +111,6 @@
         line-height: 1.6rem;
     }
 
-    .grecaptcha-badge {
-        visibility: hidden;
-    }
-
 }
 
 @media (min-width: 481px) and (max-width: 600px) {
@@ -218,10 +214,6 @@
         line-height: 1.7rem;
     }
 
-    .grecaptcha-badge {
-        visibility: hidden;
-    }
-
 
 }
 
@@ -231,7 +223,4 @@
     #subtitle {
         text-align: center;
     }
-
-    .grecaptcha-badge { visibility:visible }
-
 }
