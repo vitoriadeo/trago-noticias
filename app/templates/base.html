@@ -18,8 +18,9 @@ TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Homenaje&family=Pixelify+Sans&display=swap"
-        rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400..700&family=Homenaje&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="icon" href="{{ url_for('static', filename='img/favicon-16x16.png') }}" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
@@ -75,10 +76,10 @@ TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
             </label>
 
             <ul class="menu-list">
-                <li><a href="{{ url_for('home.index') }}">Página inicial</a></li>
-                <li><a href="{{ url_for('home.about') }}">Como funciona</a></li>
-                <li><a href="{{ url_for('home.privacy') }}">Uso de dados</a></li>
-                <li><a href="{{ url_for('home.contact') }}">Contato</a></li>
+                <li><a class="{% if request.path == url_for('home.index') %} active {% endif %}" href="{{ url_for('home.index') }}">Página inicial</a></li>
+                <li><a class="{% if request.path == url_for('home.about') %} active {% endif %}" href="{{ url_for('home.about') }}">Como funciona</a></li>
+                <li><a class="{% if request.path == url_for('home.privacy') %} active {% endif %}" href="{{ url_for('home.privacy') }}">Uso de dados</a></li>
+                <li><a class="{% if request.path == url_for('home.contact') %} active {% endif %}" href="{{ url_for('home.contact') }}">Contato</a></li>
             </ul>
         </div>
     </aside>
