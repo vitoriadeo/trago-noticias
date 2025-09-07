@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %} {{super()}} - Página não encontrada {% endblock %}
+
+{% block content %}
+<h2 id="subtitle">Erro 404 - Página não encontrada</h2>
+
+<section class="content">
+    <p>Vish! Essa página não foi encontrada... ou nem existe mais! Pode ser que a URL esteja incorreta ou que a página
+        tenha sido movida e/ou excluída.</p>
+    <p><b>Para resolver</b>, você pode tentar recarregar a página, limpar o cache do seu navegador ou <a href="{{url_for('home.index')}}">voltar para o início.</a></p>
+</section>
+{% endblock %}

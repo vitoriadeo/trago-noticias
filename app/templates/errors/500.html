@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %} {{super()}} - Erro interno do servidor {% endblock %}
+
+{% block content %}
+<h2 id="subtitle">Erro 500 - Erro interno do servidor</h2>
+
+<section class="content">
+    <p><i>Houston, temos um problema!</i> Não conseguimos processar sua solicitação por causa de alguns B.O.s internos.</p>
+    <p>Nossa equipe técnica já foi notificada e está correndo para resolver. Enquanto isso, você pode tentar
+        <b>recarregar a página</b> ou <b><a href="{{url_for('home.index')}}">voltar para o início</b></a>.</p>
+    {% endblock %}
