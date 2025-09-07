@@ -43,8 +43,8 @@ Acompanhe o status de desenvolvimento de cada etapa do projeto.
 | Nº  | Etapa                         | Status | Informações Adicionais            |
 |:----|:------------------------------|:------:|:----------------------------------|
 | 1   | Interface com HTML/CSS        |   ✅   | Feito deploy no Render. Interface pronta.  |
-| 2   | Backend em Python com Flask   |   🚧   | Trabalhando no form (segurança e rotas) |
-| 3   | Banco de dados com Supabase   |   ⬜   |                                   |
+| 2   | Backend em Python com Flask   |   ✅   | Ajustando visual dos inputs no desktop e mobile. |
+| 3   | Banco de dados                |   🚧   | Planejando modelagem de dados     |
 | 4   | Busca automática de notícias  |   ⬜   |                                   |
 | 5   | Envio de e-mails              |   ⬜   |                                   |
 | 6   | Automação diária (Cron Job)   |   ⬜   |                                   |
@@ -107,7 +107,10 @@ trago-noticias/
 │   │   ├── contact.html
 │   │   ├── about.html
 │   │   ├── privacy.html
-│   │   └── index.html
+│   │   ├── index.html
+│   │   └── errors-pages/
+│   │       ├── 505.html
+│   │       └── 404.html
 │   └── static/
 │       ├── responsive.css
 │       └── style.css
