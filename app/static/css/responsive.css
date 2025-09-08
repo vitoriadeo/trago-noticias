@@ -41,33 +41,59 @@
         padding: 25px 20px;
     }
 
-    label,
+
     input,
     select {
         display: block;
         font-size: 1.3rem;
     }
 
-    .item {
-        margin-bottom: 50px;
+    label {
+        font-size: 1.5rem;
     }
 
-    .input,
-    .select {
-        width: 95%;
-        font-size: 1.3rem;
-        margin-top: 20px;
+    /* ITENS DO FORMULÁRIO */
+    .item {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .item label {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .item .input,
+    .item .select {
+        width: 100%;
+        box-sizing: border-box;
+        background-color: rgb(236, 236, 236);
+        border: none;
+        padding: 8px;
+        border-bottom: 1px solid rgb(148, 148, 148);
+        border-radius: 3px;
+        color: rgb(92, 92, 92);
+    }
+
+    .button {
+        width: 40%;
+        font-size: 1.5rem;
+        border: none;
+        padding: 10px;
+        background-color: rgb(65, 65, 65);
+        color: #ffffff;
+        border-radius: 15px;
+    }
+
+    .form-footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
     }
 
     form {
         margin: 0;
         padding: 0;
-    }
-
-    .button {
-        width: 50%;
-        font-size: 1.4rem;
-        border-radius: 20px;
     }
 
     .txtfooter {
@@ -110,6 +136,13 @@
         font-size: 1.2rem;
         line-height: 1.6rem;
         border-radius: 0px;
+    }
+
+    .confirmation,
+    .error {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        margin-top: 30px;
     }
 
 }
@@ -166,14 +199,43 @@
         font-size: 1.6rem;
     }
 
+    /* ITENS DO FORMULÁRIO */
     .item {
-        margin-bottom: 50px;
+        display: block;
+        margin-bottom: 40px;
     }
 
-    .input,
-    .select {
-        width: 95%;
-        margin-top: 20px;
+    .item label {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .item .input,
+    .item .select {
+        width: 100%;
+        box-sizing: border-box;
+        background-color: rgb(236, 236, 236);
+        border: none;
+        padding: 8px;
+        border-bottom: 1px solid rgb(148, 148, 148);
+        border-radius: 3px;
+        color: rgb(92, 92, 92);
+    }
+
+    .button {
+        width: 40%;
+        font-size: 1.5rem;
+        border: none;
+        padding: 10px;
+        background-color: rgb(65, 65, 65);
+        color: #ffffff;
+        border-radius: 15px;
+    }
+
+    .form-footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
     }
 
     option {
@@ -187,10 +249,11 @@
     }
 
     .required-txt {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin-left: 15px;
         color: crimson
     }
+
 
     .txtfooter {
         text-align: center;
@@ -198,7 +261,7 @@
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
-        font-size: 1.5rem;
+        font-size: .8rem;
         border: none;
     }
 
@@ -215,6 +278,12 @@
         line-height: 1.7rem;
     }
 
+    .confirmation,
+    .error {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-top: 30px;
+    }
 
 }
 
@@ -224,4 +293,9 @@
     #subtitle {
         text-align: center;
     }
+
+    .txtfooter {
+        font-size: .8rem;
+    }
+
 }

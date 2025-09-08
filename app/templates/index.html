@@ -15,29 +15,28 @@
     <form id="form_alerts" action="/" method="POST">
         {{ form.csrf_token }}
         <input type="hidden" id="recaptcha-response" name="recaptcha-response">
+
         <div class="item">
             {{form.name.label}}
-            <span class="required">*</span>
             {{form.name(class='input')}}
+        </div>
+
+
+        <div class="item">
+            {{form.email.label}}
+            {{form.email(class='input')}}
         </div>
 
         <div class="item">
             {{form.word.label}}
-            <span class="required">*</span>
-            {{form.word(class='input', placeholder='ex.: série os testamentos')}}
+            {{form.word(class='input', placeholder='Ex.: série os testamentos')}}
         </div>
-        <div class="item">
-            {{form.email.label}}
-            <span class="required">*</span>
-            {{form.email(class='input')}}
-        </div>
+
         <div class="item">
             {{form.frequency.label}}
-            <span class="required">*</span> 
             {{form.frequency(class='select')}}
         </div>
         <div class="form-footer">
-            <div class="required-txt">(*) Campos obrigatórios</div>
             <button type="submit" class="button">Criar alerta</button>
         </div>
 
