@@ -43,7 +43,7 @@ Acompanhe o status de desenvolvimento de cada etapa do projeto.
 | Nº  | Etapa                         | Status | Informações Adicionais            |
 |:----|:------------------------------|:------:|:----------------------------------|
 | 1   | Interface com HTML/CSS        |   ✅   | Feito deploy no Render. Interface pronta.  |
-| 2   | Backend em Python com Flask   |   ✅   | Ajustando visual dos inputs no desktop e mobile. |
+| 2   | Backend em Python com Flask   |   ✅   | Aguardando implementação do banco de dados. |
 | 3   | Banco de dados                |   🚧   | Planejando modelagem de dados     |
 | 4   | Busca automática de notícias  |   ⬜   |                                   |
 | 5   | Envio de e-mails              |   ⬜   |                                   |
