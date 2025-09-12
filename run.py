@@ -1,3 +1,6 @@
+# Apenas inicialização e execução do servidor
+# É o arquivo que inicia minha aplicação Flask.
+
 from dotenv import load_dotenv
 
 load_dotenv()

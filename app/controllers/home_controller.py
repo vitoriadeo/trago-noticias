@@ -8,12 +8,21 @@ from flask import current_app
 bp = Blueprint("home", __name__)
 
 
+# ROTAS/PÁGINAS
 @bp.route("/", methods=["GET", "POST"])
 def index():
     form = Form()
 
     if form.validate_on_submit():
         try:
+            # WTFORMS
+            name = form.name.data
+            word = form.word.data
+            email = form.email.data
+            frequency = form.frequency.data
+
+
+            # GOOGLE RECAPTCHA V3
             recaptcha_token = request.form.get("recaptcha-response")
 
             secret_key = current_app.config["RECAPTCHA_SECRET_KEY"]
@@ -25,15 +34,8 @@ def index():
 
             print("Resposta do Google reCAPTCHA:", response, result)
 
-            name = form.name.data
-            word = form.word.data
-            email = form.email.data
-            frequency = form.frequency.data
-
-            # coisas do db e outros babados vão aqui.
-
             if result["success"] and result["score"] >= 0.5:
-                # logica do db aqui
+
                 mensagem_sucesso = f"Alerta para '{word}' criado com sucesso!"
                 return render_template(
                     "index.html", form=form, status="sucesso", mensagem=mensagem_sucesso
