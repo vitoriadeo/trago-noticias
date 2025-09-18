@@ -99,12 +99,6 @@ trago-noticias/
 
 ---
 
-### Licença
-
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
 ### Autor
 
 Desenvolvido por Vitória de Oliveira. Entre em contato!
