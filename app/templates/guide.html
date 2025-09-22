@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %} {{ super() }} - Guia de Uso {% endblock %}
+
+{%block content %}
+<h2 id="subtitle">Como cadastrar os termos?</h2>
+
+<section class="content">
+    <p><b>Direto ao ponto:</b> seja o mais descritivo possível! Quanto mais detalhes você fornecer no seu termo de
+        busca, mais
+        precisos e úteis serão os alertas que você receberá. Combine o <u>assunto principal + a intenção sobre o
+            assunto.</u></p>
+    <p>Para garantir que você receba apenas as notícias que realmente importam, é fundamental cadastrar termos
+        específicos
+        para a busca. Pense neles como um filtro para o universo de informações da internet.</p>
+
+    <p>Termos muito genéricos, como "filme" ou "futebol", podem gerar um fluxo constante de alertas, muitos dos quais
+        não
+        serão do seu interesse, sobrecarregando sua caixa de entrada.</p>
+
+    <p>A seguir, veja dicas e exemplos para refinar suas buscas e criar alertas muito mais eficientes.</p>
+
+    <p><b>Pense em palavras-chave! O segredo é combinar o assunto principal com palavras que definem a sua intenção.</b>
+    </p>
+
+    <p>Pergunte a si mesmo: o que eu quero saber sobre este assunto?
+        Lançamento ou estreia? Uma crítica ou análise? Um resumo de episódio ou capítulo? Atualizações sobre o
+        andamento? Resultados ou classificações?
+    </p>
+    <h3>Veja como transformar um termo genérico em um alerta específico:</h3>
+    <p>Exemplo 1: Livros<br>
+        Termo genérico: Winds of Winter<br>
+        Termo específico: <u>lançamento livro winds of winter ou george r r martin atualização winds of winter</u></p>
+
+    <p>Por que funciona? Foca na notícia que todos esperam: o lançamento ou uma atualização do autor.</p>
+
+    <p>Exemplo 2: Séries<br>
+        Termo genérico: Ruptura<br>
+        Termo específico: <u>série ruptura terceira temporada ou data estreia ruptura 3 temporada</u></p>
+
+    <p>Por que funciona? Especifica o formato (série) e o interesse principal (a próxima temporada).</p>
+
+    <p>Exemplo 3: Esportes<br>
+        Termo Genérico: Copa do Mundo<br>
+        Termo Específico: <u>classificação copa do mundo 2026 ou convocação seleção brasileira copa 2026</u></p>
+
+    E é isso!<br>
+    <p>Você também pode consultar <a href="{{url_for('home.about')}}">como o processo funciona</a> e quais são os
+        <a href="{{url_for('about.source')}}">portais de noticias</a> que usamos.</p>
+</section>
+{% endblock %}

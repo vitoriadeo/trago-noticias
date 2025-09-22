@@ -21,6 +21,7 @@ def create_app():
 
     # BLUEPRINT - Registro
     app.register_blueprint(home_controller.bp)
+    app.register_blueprint(home_controller.bp_about)
 
 
     # FLASK-CLI - Registra comandos feitos no tasks.py

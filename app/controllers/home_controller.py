@@ -1,10 +1,12 @@
 from flask import Blueprint, render_template, request
 from app.form import Form
+from ..services.filtro import carrega_sites_noticias
 
 import requests
 
 from flask import current_app
 
+bp_about = Blueprint("about", __name__)
 bp = Blueprint("home", __name__)
 
 
@@ -61,6 +63,14 @@ def index():
 def about():
     return render_template("about.html")
 
+@bp_about.route("/about/guide")
+def guide():
+    return render_template("guide.html")
+
+@bp_about.route("/about/source")
+def source():
+    sites = carrega_sites_noticias()
+    return render_template("source.html", sites=sites)
 
 @bp.route("/privacy")
 def privacy():
