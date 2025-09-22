@@ -29,12 +29,19 @@
 
         <div class="item">
             {{form.word.label}}
-            {{form.word(class='input', placeholder='Ex.: série os testamentos')}}
+            {{form.word(class='input', placeholder='Ex.: série os testamentos', aria_describedby="word-help-text")}}
+            <p class="help-text" id="word-help-text">
+                Cadastre apenas <b>um termo</b> específico por vez. Temos um pequeno <a
+                    href="{{url_for('about.guide')}}"><b>guia de uso</b></a> que pode ajudar!
+            </p>
         </div>
 
         <div class="item">
             {{form.frequency.label}}
-            {{form.frequency(class='select')}}
+            {{form.frequency(class='select', aria_describedby="frequency-help-text")}}
+            <p class="help-text" id="frequency-help-text">
+                Determine a frequência que deseja receber para os alertas por e-mail. Se todos os dias, meses, etc.
+            </p>
         </div>
         <div class="form-footer">
             <button type="submit" class="button">Criar alerta</button>

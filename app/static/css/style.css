@@ -1,7 +1,6 @@
 /*   STYLE.CSS - Estilização geral do site web 
 */
 
-
 body {
     background-color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
@@ -31,7 +30,7 @@ h1 {
     font-size: 60px;
 }
 
-/* === MENU DESKTOP === */
+/* MENU DESKTOP */
 nav,
 ul {
     display: flex;
@@ -103,28 +102,28 @@ header {
 .item {
     display: flex;
     align-items: center;
-    /* Alinha o label e o input verticalmente no centro */
     margin-bottom: 12px;
-    /* Adiciona um espaço entre as linhas */
+    flex-wrap: wrap;
 }
 
-/* Define o tamanho e alinhamento do label */
+/* TEXTO DE AJUDA -FORM */
+.help-text {
+    width: 100%;
+    padding: 0px 0px 10px 190px;
+    color: #999999;
+    font-size: 13px;
+}
+
 .item label {
     flex: 1;
-    /* Diz para o label ocupar '1' parte do espaço disponível */
     margin-right: 5px;
-    /* Cria o espaço entre o label e o input */
     text-align: left;
-    /* Opcional, para alinhar à direita */
 }
 
-/* Define o tamanho do input */
 .item .input,
 .item .select {
     flex: 2;
-    /* Diz para o input ocupar '2' partes do espaço, o dobro do label */
     width: 100%;
-    /* Adicionado para consistência */
     box-sizing: border-box;
     background-color: rgb(236, 236, 236);
     border: none;

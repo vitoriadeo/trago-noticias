@@ -146,6 +146,12 @@
         margin-top: 30px;
     }
 
+    /* TEXTO DE AJUDA -FORM */
+    .help-text {
+        padding: 0px 0px 10px 0px;
+        font-size: .9rem;
+    }
+
 }
 
 @media (min-width: 481px) and (max-width: 600px) {
@@ -276,6 +282,13 @@
         line-height: 2rem;
         margin-top: 30px;
     }
+
+    /* TEXTO DE AJUDA -FORM */
+    .help-text {
+        padding: 0px 0px 10px 0px;
+        font-size: 1.2rem;
+    }
+
 
 }
 
