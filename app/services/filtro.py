@@ -1,24 +1,30 @@
-from web_scraper import coleta
 from pathlib import Path
 
-resultado = coleta(termo)
+def carrega_sites_noticias():
+    caminho_atual = Path(__file__).resolve()
+    caminho_arquivo = caminho_atual.parent.parent
+    caminho_arquivo = caminho_arquivo / 'allowlist.txt'
 
-caminho_atual = Path(__file__).resolve()
-caminho_arquivo = caminho_atual.parent.parent
-caminho_arquivo = caminho_arquivo / 'allowlist.txt'
+    caminho_arquivo = Path('app/allowlist.txt')
 
-caminho_arquivo = Path('app/allowlist.txt')
+    with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
+        dominios = [sites.split(', ') for sites in arquivo]
 
-with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
-    dominios = [sites.split(', ') for sites in arquivo]
+    dominios = set(dominios[0])
 
-dominios = set(dominios[0])
+    return dominios
 
-noticias_filtradas = []
+"""
+RESULTADO VEM DE WEB_SCRAPER.PY
+def filtragem():
+    dominios = carrega_sites_noticias()
 
-for noticia in resultado:
-    for fonteChave, siteValor in noticia.items():
-        if siteValor in dominios:
-            noticias_filtradas.append(noticia)
+    noticias_filtradas = []
 
-print(noticias_filtradas)
+    for noticia in resultado:
+        for fonteChave, siteValor in noticia.items():
+            if siteValor in dominios:
+                noticias_filtradas.append(noticia)
+
+    return noticias_filtradas
+"""
