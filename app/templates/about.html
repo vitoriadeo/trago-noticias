@@ -8,19 +8,13 @@
 <section class="content">
     <h3>Sobre</h3>
 
-    <p>O projeto Trago Notícias foi criado para permitir que usuários acompanhem assuntos de temas específicos de forma
-        prática e automatizada. A ideia central é que o usuário informe um termo de interesse (como o título de um
-        livro, um
-        tema de estudo ou um assunto de atualidade), e o sistema monitore automaticamente a internet em busca de
-        notícias
-        relacionadas, enviando alertas sempre que novas informações forem encontradas.</p>
+    <p>O projeto foi criado para permitir que usuários acompanhem assuntos de temas específicos de forma prática e automatizada. A ideia central é que o usuário informe um termo de interesse (como o título de um livro, um tema de estudo ou um assunto de atualidade), e o sistema monitore automaticamente a internet em busca de notícias relacionadas, enviando alertas sempre que novas informações forem encontradas.</p>
     <p> </p>
     <h3>Funcionamento</h3>
 
     <p>
     <h4>1. Cadastro do termo de interesse</h4>
-    O usuário acessa o sistema e cadastra um termo que deseja monitorar. Esse termo pode ser qualquer palavra ou
-    expressão que descreva o assunto de interesse.</p>
+    O usuário acessa o sistema e cadastra um termo que deseja monitorar. Esse termo precisa ser um pouco específico para não gerar alertas desnecessários. Verifique o <a href="{{url_for('about.guide')}}">guia de uso</a> para cadastrar corretamente.</p>
 
 
     <p>
@@ -32,9 +26,7 @@
 
     <p>
     <h4>3. Busca automática por notícias</h4>
-    O sistema realiza buscas periódicas na internet, consultando sites de notícias e fontes confiáveis para
-    identificar
-    novas publicações que contenham o termo cadastrado.</p>
+    O sistema realiza buscas periódicas na internet, consultando sites de notícias e <a href="{{url_for('about.source')}}">fontes confiáveis</a> para identificar novas publicações que contenham o termo cadastrado.</p>
 
 
     <p>
