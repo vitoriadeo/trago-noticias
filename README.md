@@ -55,13 +55,11 @@ Acompanhe o status de desenvolvimento de cada etapa do projeto.
 ---
 
 ### Documentação
-
-## Arquitetura do Banco de Dados
+### Arquitetura do banco de dados
 
 Toda a documentação sobre a modelagem e a estrutura do banco de dados desse projeto pode ser encontrada na pasta `/docs`.
 
-- **[Modelagem e Dicionário de Dados](./docs/database)**
-- **[Diagrama Entidade-Relacionamento (DER)](./docs/database/Diagrama ER de banco de dados (pé de galinha).png)**
+- **[Modelagem](./docs/database)** (em desenvolvimento)
 
 ---
 
@@ -81,26 +79,26 @@ trago-noticias/
 │ ├── config.py
 │ ├── allowlist.txt
 │ ├── controllers/
-│ │ ├── __init__.py
-│ │ └── home_controller.py
+│ │   ├── __init__.py
+│ │   └── home_controller.py
 │ ├── services/
-│ │ ├── web_scraper.py
-│ │ └── filtro.py
+│ │   ├── web_scraper.py
+│ │   └── filtro.py
 │ ├── models/
-│ │ ├── __init__.py
-│ │ └── termo.py
+│ │   ├── __init__.py
+│ │   └── termo.py
 │ ├── templates/
-│ │ ├── base.html
-│ │ ├── contact.html
-│ │ ├── about.html
-│ │ ├── privacy.html
-│ │ ├── index.html
-│ │ └── errors-pages/
-│ │ ├── 505.html
-│ │ └── 404.html
+│ │   ├── base.html
+│ │   ├── contact.html
+│ │   ├── about.html
+│ │   ├── privacy.html
+│ │   ├── index.html
+│ │   └── errors-pages/
+│ │       ├── 505.html
+│ │       └── 404.html
 │ └── static/
-│ ├── responsive.css
-│ └── style.css
+│     ├── responsive.css
+│     └── style.css
 ├── docs/
 │   └── database/
 │       ├── dicionario_de_dados_ods.ods
