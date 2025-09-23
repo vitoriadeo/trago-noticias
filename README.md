@@ -30,8 +30,10 @@ Este projeto foi construído utilizando as seguintes tecnologias e plataformas:
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white) 
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white)
 
 ---
 
@@ -52,6 +54,17 @@ Acompanhe o status de desenvolvimento de cada etapa do projeto.
 
 ---
 
+### Documentação
+
+## Arquitetura do Banco de Dados
+
+Toda a documentação sobre a modelagem e a estrutura do banco de dados desse projeto pode ser encontrada na pasta `/docs`.
+
+- **[Modelagem e Dicionário de Dados](./docs/database)**
+- **[Diagrama Entidade-Relacionamento (DER)](./docs/database/Diagrama ER de banco de dados (pé de galinha).png)**
+
+---
+
 ### Como rodar o projeto localmente
 
 (Em desenvolvimento)
@@ -64,38 +77,44 @@ Acompanhe o status de desenvolvimento de cada etapa do projeto.
 ```plaintext
 trago-noticias/
 ├── app/
-│   ├── __init__.py
-│   ├── config.py
-│   ├── allowlist.txt
-│   ├── controllers/
-│   │   ├── __init__.py
-│   │   └── home_controller.py
-│   ├── services/
-│   │   ├── web_scraper.py
-│   │   └── filtro.py
-│   ├── models/
-│   │   ├── __init__.py
-│   │   └── termo.py
-│   ├── templates/
-│   │   ├── base.html
-│   │   ├── contact.html
-│   │   ├── about.html
-│   │   ├── privacy.html
-│   │   ├── index.html
-│   │   └── errors-pages/
-│   │       ├── 505.html
-│   │       └── 404.html
-│   └── static/
-│       ├── responsive.css
-│       └── style.css
-|    
+│ ├── __init__.py
+│ ├── config.py
+│ ├── allowlist.txt
+│ ├── controllers/
+│ │ ├── __init__.py
+│ │ └── home_controller.py
+│ ├── services/
+│ │ ├── web_scraper.py
+│ │ └── filtro.py
+│ ├── models/
+│ │ ├── __init__.py
+│ │ └── termo.py
+│ ├── templates/
+│ │ ├── base.html
+│ │ ├── contact.html
+│ │ ├── about.html
+│ │ ├── privacy.html
+│ │ ├── index.html
+│ │ └── errors-pages/
+│ │ ├── 505.html
+│ │ └── 404.html
+│ └── static/
+│ ├── responsive.css
+│ └── style.css
+├── docs/
+│   └── database/
+│       ├── dicionario_de_dados_ods.ods
+│       ├── dicionario_de_dados_xlsx.xlsx
+│       ├── diagrama_er.png
+│       └── links.txt
 ├── run.py
 ├── requirements.txt
 ├── .cz.toml
 ├── README.md
 └── .gitignore
 ```
-</details> 
+
+</details>
 
 ---
 
