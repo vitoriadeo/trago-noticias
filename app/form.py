@@ -21,10 +21,8 @@ class Form(FlaskForm):
             DataRequired(message="Por favor, selecione uma frequência para o alerta."),
             AnyOf(
                 values=[
-                    ("diario"),
-                    ("semanal"),
-                    ("mensal"),
-                    ("anual"),
+                    ("once"),
+                    ("realtime"),
                 ],
                 message="Por favor, escolha uma opção válida.",
             ),
