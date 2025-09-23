@@ -1,7 +1,3 @@
-<!--TEMPLATES/HOME.HTML-->
-<!-- 
-TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
--->
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -97,10 +93,12 @@ TODO: Acessibilidade: testar com teclado e leitor de tela para garantir.
             <a href="https://policies.google.com/privacy">Política de Privacidade</a> e os
             <a href="https://policies.google.com/terms">Termos de Serviço</a> do Google se aplicam.
         </p>
-        <p class="txtfooter"><a href="{{url_for('home.privacy')}}" target="_blank" title="Github">Política de
-                Privacidade</a></p>
-        <p class="txtfooter">Desenvolvido por <a href="https://github.com/vitoriadeo" target="_blank"
-                title="Github">@vitoriadeo</a></p>
+
+        <p class="txtfooter">
+            <a href="{{url_for('home.privacy')}}" target="_blank" title="Github">Política de
+                Privacidade</a><br>
+            Desenvolvido por <a href="https://github.com/vitoriadeo" target="_blank" title="Github">@vitoriadeo</a>
+        </p>
     </footer>
     <script src="https://www.google.com/recaptcha/api.js?render={{config.RECAPTCHA_SITE_KEY}}"></script>
     <script>
