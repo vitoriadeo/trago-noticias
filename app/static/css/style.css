@@ -140,6 +140,7 @@ header {
     background-color: rgb(65, 65, 65);
     color: #ffffff;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .form-footer {

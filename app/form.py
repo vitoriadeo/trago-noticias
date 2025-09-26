@@ -1,9 +1,10 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SelectField, EmailField
+from wtforms import StringField, SelectField, EmailField, SubmitField
 from wtforms.validators import DataRequired, Email, Length, AnyOf
 
 
 class Form(FlaskForm):
+
     name = StringField("Seu nome", validators=[DataRequired(), Length(min=2, max=100)])
     word = StringField(
         "Termo para monitorar",
@@ -28,3 +29,4 @@ class Form(FlaskForm):
             ),
         ],
     )
+    submit_button = SubmitField("Criar alerta", render_kw={'class': 'button'})

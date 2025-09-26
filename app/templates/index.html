@@ -13,7 +13,8 @@
 
 <section id="form_area">
     <form id="form_alerts" action="/" method="POST">
-        {{ form.csrf_token }}
+        {{ form.hidden_tag() }}
+
         <input type="hidden" id="recaptcha-response" name="recaptcha-response">
 
         <div class="item">
@@ -40,11 +41,11 @@
             {{form.frequency.label}}
             {{form.frequency(class='select', aria_describedby="frequency-help-text")}}
             <p class="help-text" id="frequency-help-text">
-                Determine a frequência que deseja receber os alertas por e-mail. 
+                Determine a frequência que deseja receber os alertas por e-mail.
             </p>
         </div>
         <div class="form-footer">
-            <button type="submit" class="button">Criar alerta</button>
+            {{ form.submit_button }}
         </div>
 
         {% if status == 'sucesso' %}
