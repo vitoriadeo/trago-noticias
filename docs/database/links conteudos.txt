@@ -1,3 +1,4 @@
+Diagrama conceitual no brModelo: https://app.brmodeloweb.com/#!/publicview/68e6b2aadd3af3242096e511
 Diagrama ER no LucidChart: https://lucid.app/lucidchart/0abfe095-acc7-407f-ad39-050f8729b02c/view
 Modelagem no Google Docs: https://docs.google.com/document/d/e/2PACX-1vSiW8p10XuIiLlPvtu5TMjhR5u0SA7I_uHzE-WyoFtVAQs1pAI2sUs-s1hpWhaOQRF_c9ki0_amLKAn/pub
 Dicionário de dados no Google Planilhas: https://docs.google.com/spreadsheets/d/e/2PACX-1vQKDZXoNr-5-uw299y5LZIxf7hIoEh_Tl3uob2VeHvbFZQs4ridbr5NmlvGV_-Ok5ufbwKefcNXKmhk/pubhtml
