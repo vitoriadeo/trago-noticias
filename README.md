@@ -77,7 +77,7 @@ trago-noticias/
 ├── app/
 │ ├── __init__.py
 │ ├── config.py
-│ ├── database.py
+│ ├── database_manager.py
 │ ├── form.py
 │ ├── allowlist.txt
 │ ├── controllers/
@@ -88,7 +88,7 @@ trago-noticias/
 │ │   └── filtro.py
 │ ├── models/
 │ │   ├── __init__.py
-│ │   └── db_manager.py
+│ │   └── alert_service.py
 │ ├── templates/
 │ │   ├── base.html
 │ │   ├── contact.html
@@ -105,8 +105,10 @@ trago-noticias/
 │   └── database/
 │       ├── dicionario_de_dados_ods.ods
 │       ├── dicionario_de_dados_xlsx.xlsx
+│       ├── normalizacao_ods.ods
+│       ├── normalizacao_xlsx.xlsx
 │       ├── diagrama_er.png
-│       └── links.txt
+│       └── links_conteudos.txt
 ├── run.py
 ├── requirements.txt
 ├── .cz.toml
