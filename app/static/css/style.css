@@ -308,6 +308,7 @@ header {
     box-sizing: border-box;
     border-radius: 10px;
     margin-top: 15px;
+    line-height: 25px;
 }
 
 .error {
@@ -318,6 +319,7 @@ header {
     box-sizing: border-box;
     border-radius: 10px;
     margin-top: 15px;
+    line-height: 25px;
 }
 
 .advice-google {

@@ -48,15 +48,23 @@
             {{ form.submit_button }}
         </div>
 
-        {% if status == 'sucesso' %}
-        <div class="confirmation">
-            <p>✅️ {{mensagem}}</p>
-        </div>
-        {% elif status == 'falha' %}
-        <div class="error">
-            <p>❌ {{mensagem}}</p>
-        </div>
-        {% endif %}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+                {% for category, message in messages %}
+                <div class="{{ category }}">
+                    <p>
+                        {% if category == 'confirmation' %}
+                        ✅️
+                        {% elif category == 'error' %}
+                        ❌
+                        {% endif %}
+
+                        {{ message }}
+                    </p>
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
 
     </form>
 </section>
