@@ -3,13 +3,15 @@
 
 import os 
 from flask import Flask, render_template
-from .config import ProdConfig, DevConfig
+from .config import ProdConfig, DevConfig, Config
 from app.controllers import home_controller
-from . import tasks
+from . import database_manager, tasks
+
 
 
 def create_app():
     app = Flask(__name__)
+    
 
     # CONDICIONAL PARA VARIÁVEL DE AMBIENTE
     if os.environ.get('FLASK_ENV') == 'production':
@@ -19,9 +21,17 @@ def create_app():
         app.config.from_object(DevConfig)
 
 
+    # BANCO DE DADOS
+    database_manager.init_app(app)
+
+
     # BLUEPRINT - Registro
     app.register_blueprint(home_controller.bp)
     app.register_blueprint(home_controller.bp_about)
+
+
+    # ADICIONAIS
+    app.config.from_object(Config)
 
 
     # FLASK-CLI - Registra comandos feitos no tasks.py

@@ -34,7 +34,7 @@ Este projeto foi construído utilizando as seguintes tecnologias e plataformas:
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white)
-
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ---
 
 ### Roadmap do projeto
@@ -45,7 +45,7 @@ Acompanhe o status de desenvolvimento de cada etapa do projeto.
 |:----|:------------------------------|:------:|:----------------------------------|
 | 1   | Interface com HTML/CSS        |   ✅   | Feito deploy no Render. Interface pronta.  |
 | 2   | Backend em Python com Flask   |   ✅   | Aguardando implementação do banco de dados. |
-| 3   | Banco de dados                |   🚧   | Planejando modelagem de dados     |
+| 3   | Banco de dados                |   🚧   | Trabalhando no DB |
 | 4   | Busca de noticia e filtragem  |   🚧   | Em desenvolvimento                |
 | 5   | Envio de e-mails              |   ⬜   |                                   |
 | 6   | Automação diária (Cron Job)   |   ⬜   |                                   |
@@ -77,6 +77,8 @@ trago-noticias/
 ├── app/
 │ ├── __init__.py
 │ ├── config.py
+│ ├── database_manager.py
+│ ├── form.py
 │ ├── allowlist.txt
 │ ├── controllers/
 │ │   ├── __init__.py
@@ -86,7 +88,7 @@ trago-noticias/
 │ │   └── filtro.py
 │ ├── models/
 │ │   ├── __init__.py
-│ │   └── termo.py
+│ │   └── alert_service.py
 │ ├── templates/
 │ │   ├── base.html
 │ │   ├── contact.html
@@ -103,11 +105,14 @@ trago-noticias/
 │   └── database/
 │       ├── dicionario_de_dados_ods.ods
 │       ├── dicionario_de_dados_xlsx.xlsx
+│       ├── normalizacao_ods.ods
+│       ├── normalizacao_xlsx.xlsx
 │       ├── diagrama_er.png
-│       └── links.txt
+│       └── links_conteudos.txt
 ├── run.py
 ├── requirements.txt
 ├── .cz.toml
+├── init_db.py
 ├── README.md
 └── .gitignore
 ```

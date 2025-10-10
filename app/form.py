@@ -5,12 +5,27 @@ from wtforms.validators import DataRequired, Email, Length, AnyOf
 
 class Form(FlaskForm):
 
-    name = StringField("Seu nome", validators=[DataRequired(), Length(min=2, max=100)])
+    name = StringField(
+        "Seu nome",
+        validators=[
+            DataRequired(message="Por favor, insira seu nome."),
+            Length(min=2, max=100),
+        ],
+    )
     word = StringField(
         "Termo para monitorar",
-        validators=[DataRequired(), Length(min=2, max=100)],
+        validators=[
+            DataRequired(message="Você precisa nos dizer o que monitorar!"),
+            Length(min=3, max=255, message="O termo deve ter pelo menos 3 caracteres."),
+        ],
     )
-    email = EmailField("Endereço de e-mail", validators=[DataRequired(), Email()])
+    email = EmailField(
+        "Endereço de e-mail",
+        validators=[
+            DataRequired(message="O campo de e-mail é obrigatório."),
+            Email(message="Por favor, insira um e-mail válido."),
+        ],
+    )
     frequency = SelectField(
         "Frequência dos alertas",
         choices=[
@@ -29,4 +44,4 @@ class Form(FlaskForm):
             ),
         ],
     )
-    submit_button = SubmitField("Criar alerta", render_kw={'class': 'button'})
+    submit_button = SubmitField("Criar alerta", render_kw={"class": "button"})
