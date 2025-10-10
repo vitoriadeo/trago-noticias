@@ -1,6 +1,7 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, flash
 from app.form import Form
 from ..services.filtro import carrega_sites_noticias
+from ..models import alert_service
 
 import requests
 
@@ -19,10 +20,11 @@ def index():
         try:
             # WTFORMS
             name = form.name.data
-            word = form.word.data
             email = form.email.data
+            word = form.word.data
             frequency = form.frequency.data
 
+            alert_service.handle_alert_submission(name, email, word, frequency)
 
             # GOOGLE RECAPTCHA V3
             recaptcha_token = request.form.get("recaptcha-response")
@@ -38,23 +40,20 @@ def index():
 
             if result["success"] and result["score"] >= 0.5:
 
-                mensagem_sucesso = f"Alerta para '{word}' criado com sucesso!"
+                flash(f"Alerta para '{word}' criado com sucesso! Você receberá as novidades por e-mail.", 'confirmation')
                 return render_template(
-                    "index.html", form=form, status="sucesso", mensagem=mensagem_sucesso
-                )
+                    "index.html", form=form, status="sucesso")
             else:
-                mensagem_falha = "Falha na verificação reCAPTCHA. Tente novamente."
+                flash("Falha na verificação reCAPTCHA. Tente novamente.", 'error')
                 return render_template(
-                    "index.html", form=form, status="falha", mensagem=mensagem_falha
-                )
+                    "index.html", form=form, status="falha")
 
-        except Exception as erro:
-            print(f"Ocorreu um erro: {erro}")
+        except Exception as e:
+            print(f"Ocorreu um erro: {e}")
 
-            mensagem_falha = "Vish! Ocorreu um erro interno."
+            flash("Vish! Ocorreu um erro interno.", 'error')
             return render_template(
-                "index.html", form=form, status="falha", mensagem=mensagem_falha
-            )
+                "index.html", form=form, status="falha")
 
     return render_template("index.html", form=form)
 
