@@ -1,5 +1,6 @@
 from app.database_manager import get_db
-
+from .web_scraper import coleta
+from .filtro import carrega_sites_noticias, filtragem
 
 # FUNÇÃO PRINCIPAL. 
 # O EMAIL ADD AO FORMULÁRIO JÁ EXISTE?
@@ -51,3 +52,29 @@ def add_user_and_alert(nome, email, termo, frequencia, cursor):
     cursor.execute("insert into alerta (termo, frequencia, id_usuario) values (%s, %s, %s)", (termo, frequencia, user_id))
 
     print(f"Sucesso! Usuário ID: {user_id}, alerta para o termo '{termo}' criado.")
+
+
+
+# FUNÇÃO PRINCIPAL
+# PROCESSAMENTO DE ALERTAS
+def process_alerts():
+    db = get_db()
+    cursor = db.cursor()
+
+    try:
+        cursor.execute("select a.id_alerta, a.termo, u.nome, u.email from alerta a join usuario u on a.id_usuario = u.id_usuario where a.status_alerta = TRUE")
+        resultado = cursor.fetchall()
+
+        for id, termo, nome, email in resultado:
+            resultado = coleta(termo)
+            
+            print(filtragem(resultado))
+
+        print("Operação concluída")
+
+    except Exception as e:
+        db.rollback()
+        print(f"Erro: {e}")
+        raise e
+    finally:
+        cursor.close()

@@ -1,4 +1,5 @@
 import click
+from .services.alert_service import process_alerts
 
 # TESTANDO CLI
 @click.command('TesteCLI')
@@ -10,10 +11,6 @@ def TesteCLI():
 def task_maestro(): #Busca, execução, filtro e envio
     click.echo('Rotina de busca iniciada...')
 
-    # FUNÇÕES AUXILIARES
-    # alertas_do_dia(): Essa função terá a lógica de descobrir qual é o dia da semana e consultar o banco de dados para retornar os alertas corretos.
-    # executar_webScrapping(): Para buscas de termos
-    # filtragem(noticias_brutas): Com allowlist. Comparação com noticias brutas.
-    # envioNoticias(alerta, noticiasfiltradas): 
+    process_alerts()
 
     click.echo('Rotina finalizada!')

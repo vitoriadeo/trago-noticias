@@ -14,9 +14,8 @@ def carrega_sites_noticias():
 
     return dominios
 
-"""
-RESULTADO VEM DE WEB_SCRAPER.PY
-def filtragem():
+
+def filtragem(resultado):
     dominios = carrega_sites_noticias()
 
     noticias_filtradas = []
@@ -27,4 +26,3 @@ def filtragem():
                 noticias_filtradas.append(noticia)
 
     return noticias_filtradas
-"""
