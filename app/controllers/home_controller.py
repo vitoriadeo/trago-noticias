@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, flash
 from app.form import Form
 from ..services.filtro import carrega_sites_noticias
-from ..models import alert_service
+from ..services import alert_service
 
 import requests
 
@@ -24,8 +24,6 @@ def index():
             word = form.word.data
             frequency = form.frequency.data
 
-            alert_service.handle_alert_submission(name, email, word, frequency)
-
             # GOOGLE RECAPTCHA V3
             recaptcha_token = request.form.get("recaptcha-response")
 
@@ -39,6 +37,7 @@ def index():
             print("Resposta do Google reCAPTCHA:", response, result)
 
             if result["success"] and result["score"] >= 0.5:
+                alert_service.handle_alert_submission(name, email, word, frequency)
 
                 flash(f"Alerta para '{word}' criado com sucesso! Você receberá as novidades por e-mail.", 'confirmation')
                 return render_template(
