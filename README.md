@@ -8,7 +8,7 @@ Esse é um sistema web para monitorar assuntos com base em termos de interesse c
 
 Você pode acessar a versão ao vivo da aplicação clicando no link abaixo:
 
-**[https://trago-noticias.onrender.com](https://trago-noticias.onrender.com)**
+**[https://tragonoticias.site/](https://tragonoticias.site/)**
 
 **Obs.:** O site pode demorar um pouquinho para inicializar. O Render tem um delay no plano gratuito, esse processo de inicialização pode levar de 15 a 30 segundos, às vezes até mais.
 
@@ -16,11 +16,11 @@ Você pode acessar a versão ao vivo da aplicação clicando no link abaixo:
 
 ### Funcionalidades
 
-- [ ] Cadastro de termos de interesse pelo usuário.
-- [ ] Armazenamento dos termos em um banco de dados seguro.
-- [ ] Rotina automática para buscar notícias na internet relacionadas aos termos.
+- [x] Cadastro de termos de interesse pelo usuário.
+- [x] Armazenamento dos termos em um banco de dados seguro.
+- [x] Rotina automática para buscar notícias na internet relacionadas aos termos.
 - [ ] Envio de notificações por e-mail com as notícias encontradas.
-- [ ] Interface web simples e responsiva para interação.
+- [x] Interface web simples e responsiva para interação.
 
 ---
 
@@ -43,14 +43,14 @@ Acompanhe o status de desenvolvimento de cada etapa do projeto.
 
 | Nº  | Etapa                         | Status | Informações adicionais            |
 |:----|:------------------------------|:------:|:----------------------------------|
-| 1   | Interface com HTML/CSS        |   ✅   | Feito deploy no Render. Interface pronta.  |
-| 2   | Backend em Python com Flask   |   ✅   | Aguardando implementação do banco de dados. |
-| 3   | Banco de dados                |   🚧   | Trabalhando no DB |
-| 4   | Busca de noticia e filtragem  |   🚧   | Em desenvolvimento                |
-| 5   | Envio de e-mails              |   ⬜   |                                   |
+| 1   | Interface com HTML/CSS        |   ✅   |  |
+| 2   | Backend em Python com Flask   |   ✅   |  |
+| 3   | Banco de dados                |   ✅   |  |
+| 4   | Busca de noticia e filtragem  |   ✅   |  |
+| 5   | Envio de e-mails              |   🚧   | Em desenvolvimento |
 | 6   | Automação diária (Cron Job)   |   ⬜   |                                   |
 
-*Legenda: 🚧 - Em progresso / ✅ - Concluído / ⬜ - Pendente*
+**Legenda:** 🚧 - Em progresso / ✅ - Concluído / ⬜ - Pendente
 
 ---
 
@@ -59,7 +59,7 @@ Acompanhe o status de desenvolvimento de cada etapa do projeto.
 
 Toda a documentação sobre a modelagem e a estrutura do banco de dados desse projeto pode ser encontrada na pasta `/docs`.
 
-- **[Modelagem](./docs/database)** (em desenvolvimento)
+- **[Modelagem](./docs/database)**
 
 ---
 
@@ -85,10 +85,10 @@ trago-noticias/
 │ │   └── home_controller.py
 │ ├── services/
 │ │   ├── web_scraper.py
+│ │   ├── alert_service.py
 │ │   └── filtro.py
 │ ├── models/
-│ │   ├── __init__.py
-│ │   └── alert_service.py
+│ │   └── __init__.py
 │ ├── templates/
 │ │   ├── base.html
 │ │   ├── contact.html
