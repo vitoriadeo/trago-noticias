@@ -1,0 +1,48 @@
+name: Trago Noticias CRON
+
+on:
+  schedule:
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13.7' # Use a versão do Python do seu projeto
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run the Flask task
+        env:
+      # Secrets do Banco de Dados
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_USER: ${{ secrets.DB_USER }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+
+          # Secrets do E-mail e App
+          MAIL_DEFAULT_SENDER: ${{ secrets.MAIL_DEFAULT_SENDER }}
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          
+          # Secrets do reCAPTCHA
+          RECAPTCHA_SECRET_KEY: ${{ secrets.RECAPTCHA_SECRET_KEY }}
+          RECAPTCHA_SITE_KEY: ${{ secrets.RECAPTCHA_SITE_KEY }}
+
+          # Variáveis de Configuração (não-secretas)
+          FLASK_APP: 'run:app'
+          FLASK_ENV: 'production'
+        run: flask initTasks
