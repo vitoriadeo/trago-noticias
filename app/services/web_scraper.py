@@ -8,7 +8,7 @@ def coleta(termo):
     resultados_noticias = []
     base_url = "https://news.google.com"
 
-    print(f"Iniciando buscas por {termo}...")
+    print(f"Buscando novidades sobre {termo}...")
 
     try:
         resposta = requests.get(f'https://news.google.com/search?q={termo}&hl=pt-BR&gl=BR&ceid=BR%3Apt-419')
@@ -22,11 +22,10 @@ def coleta(termo):
             tag_data = noticia.find('time')
             data_publicacao = tag_data.get('datetime') if tag_data else None
 
-
             if tag_a:
                 link_relativo = tag_a['href']
             else:
-                print('SEM LINK. PULANDO!!')
+                print('Sem link.')
                 continue
 
             link_completo = urljoin(base_url, link_relativo)

@@ -30,12 +30,7 @@ def create_app():
     app.register_blueprint(home_controller.bp_about)
 
 
-    # ADICIONAIS
-    app.config.from_object(Config)
-
-
     # FLASK-CLI - Registra comandos feitos no tasks.py
-    app.cli.add_command(tasks.TesteCLI)
     app.cli.add_command(tasks.task_maestro)
 
 
@@ -47,8 +42,5 @@ def create_app():
     @app.errorhandler(500)
     def internal_error(error):
 
-        # para reverter sessão em caso de erros >> db.session.rollback()
         return render_template('errors/500.html'), 500
-
-
     return app
