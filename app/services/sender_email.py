@@ -43,8 +43,8 @@ def send_email(nome, email, termo, noticias):
         sg = SendGridAPIClient(api_key)
         response = sg.send(message)
         print(f">> Email sobre o alerta {termo} enviado para [{nome} - {destinatario}] | status code: {response.status_code}")
-        return True, print("Messagem enviada com sucesso!")
+        return True, print("Email enviado com sucesso!")
     
     except Exception as e:
         print(f"LOG EMAIL: {e}")
-        return False, print(f"Ocorreu um erro ao enviar a mensagem: {e}")
+        return False, print(f"Ocorreu um erro ao enviar o email: {e}")
