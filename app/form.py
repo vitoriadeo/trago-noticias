@@ -30,8 +30,7 @@ class Form(FlaskForm):
         "Frequência dos alertas",
         choices=[
             ("", "Selecione a frequência"),
-            ("once", "Somente uma vez, quando uma novidade aparecer"),
-            ("realtime", "Sempre que uma novidade aparecer"),
+            ("once", "Somente uma vez, quando uma novidade aparecer")
         ],
         validators=[
             DataRequired(message="Por favor, selecione uma frequência para o alerta."),
