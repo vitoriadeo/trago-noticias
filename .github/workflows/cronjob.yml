@@ -43,6 +43,6 @@ jobs:
           RECAPTCHA_SITE_KEY: ${{ secrets.RECAPTCHA_SITE_KEY }}
 
           # Variáveis de Configuração (não-secretas)
-          FLASK_APP: 'run:app'
+          FLASK_APP: 'run.py' 
           FLASK_ENV: 'production'
         run: flask initTasks
