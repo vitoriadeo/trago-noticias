@@ -11,6 +11,15 @@ body {
     font-style: normal;
 }
 
+blockquote {
+    background-color: #bbbbbb8a;
+    margin-left: 0px;
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
 a {
     color: cornflowerblue;
     text-decoration: none;
