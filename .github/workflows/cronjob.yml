@@ -45,4 +45,5 @@ jobs:
           # Variáveis de Configuração (não-secretas)
           FLASK_APP: 'run.py' 
           FLASK_ENV: 'production'
+          PYTHONPATH: './'
         run: flask initTasks

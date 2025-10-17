@@ -7,8 +7,6 @@ from .config import ProdConfig, DevConfig, Config
 from app.controllers import home_controller
 from . import database_manager, tasks
 
-
-
 def create_app():
     app = Flask(__name__)
     
