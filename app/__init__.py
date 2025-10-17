@@ -29,7 +29,6 @@ def create_app():
     app.register_blueprint(home_controller.bp)
     app.register_blueprint(home_controller.bp_about)
 
-
     # FLASK-CLI - Registra comandos feitos no tasks.py
     app.cli.add_command(tasks.task_maestro)
 
