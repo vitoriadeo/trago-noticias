@@ -19,7 +19,7 @@ Você pode acessar a versão ao vivo da aplicação clicando no link abaixo:
 - [x] Cadastro de termos de interesse pelo usuário.
 - [x] Armazenamento dos termos em um banco de dados seguro.
 - [x] Rotina automática para buscar notícias na internet relacionadas aos termos.
-- [ ] Envio de notificações por e-mail com as notícias encontradas.
+- [x] Envio de notificações por e-mail com as notícias encontradas.
 - [x] Interface web simples e responsiva para interação.
 
 ---
@@ -35,28 +35,10 @@ Este projeto foi construído utilizando as seguintes tecnologias e plataformas:
 ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
----
-
-### Roadmap do projeto
-
-Acompanhe o status de desenvolvimento de cada etapa do projeto.
-
-| Nº  | Etapa                         | Status | Informações adicionais            |
-|:----|:------------------------------|:------:|:----------------------------------|
-| 1   | Interface com HTML/CSS        |   ✅   |  |
-| 2   | Backend em Python com Flask   |   ✅   |  |
-| 3   | Banco de dados                |   ✅   |  |
-| 4   | Busca de noticia e filtragem  |   ✅   |  |
-| 5   | Envio de e-mails              |   🚧   | Em desenvolvimento |
-| 6   | Automação diária (Cron Job)   |   ⬜   |                                   |
-
-**Legenda:** 🚧 - Em progresso / ✅ - Concluído / ⬜ - Pendente
 
 ---
 
 ### Documentação
-### Arquitetura do banco de dados
-
 Toda a documentação sobre a modelagem e a estrutura do banco de dados desse projeto pode ser encontrada na pasta `/docs`.
 
 - **[Modelagem](./docs/database)**
@@ -86,6 +68,7 @@ trago-noticias/
 │ ├── services/
 │ │   ├── web_scraper.py
 │ │   ├── alert_service.py
+│ │   ├── sender_email.py
 │ │   └── filtro.py
 │ ├── models/
 │ │   └── __init__.py
