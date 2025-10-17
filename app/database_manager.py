@@ -5,7 +5,7 @@ from flask import current_app, g
 def get_db():
     if 'db' not in g:
         db_url = current_app.config['DATABASE_URL']
-        g.db = psycopg2.connect(db_url)
+        g.db = psycopg2.connect(db_url, sslmode='require')
 
     return g.db
 
