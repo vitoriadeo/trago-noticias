@@ -5,7 +5,7 @@ import os
 from flask import Flask, render_template
 from .config import ProdConfig, DevConfig, Config
 from app.controllers import home_controller
-from . import database_manager, tasks
+from . import database_manager
 
 def create_app():
     app = Flask(__name__)
@@ -28,6 +28,7 @@ def create_app():
     app.register_blueprint(home_controller.bp_about)
 
     # FLASK-CLI - Registra comandos feitos no tasks.py
+    from app import tasks
     app.cli.add_command(tasks.task_maestro)
 
 
