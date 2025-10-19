@@ -25,7 +25,7 @@ def index():
             frequency = form.frequency.data
 
             # GOOGLE RECAPTCHA V3
-            recaptcha_token = request.form.get("recaptcha-response")
+            recaptcha_token = request.form.get("g-recaptcha-response")
 
             secret_key = current_app.config["RECAPTCHA_SECRET_KEY"]
             verification_url = "https://www.google.com/recaptcha/api/siteverify"
@@ -36,7 +36,7 @@ def index():
 
             print("Resposta do Google reCAPTCHA:", response, result)
 
-            if result["success"] and result["score"] >= 0.5:
+            if result["success"]:
                 alert_service.handle_alert_submission(name, email, word, frequency)
 
                 flash(f"Alerta para '{word}' criado com sucesso! Você receberá as novidades por e-mail.", 'confirmation')
