@@ -47,7 +47,89 @@ Toda a documentação sobre a modelagem e a estrutura do banco de dados desse pr
 
 ### Como rodar o projeto localmente
 
-(Em desenvolvimento)
+Siga os passos abaixo para configurar e executar o projeto na sua máquina local.
+
+#### 1. Pré-requisitos
+Antes de começar, garanta que você tenha os seguintes softwares instalados:
+* [Python](https://www.python.org/downloads/) (versão 3.10 ou superior)
+* [Git](https://git-scm.com/)
+* [PostgreSQL](https://www.postgresql.org/download/) (um servidor de banco de dados rodando localmente, aqui estou usando a versão 17.6)
+
+#### 2. Clone o repositório
+Abra seu terminal e clone o projeto do GitHub:
+```bash
+git clone https://github.com/vitoriadeo/trago-noticias.git
+```
+
+#### 3. Configure o ambiente virtual e instale as dependências
+```bash
+# Crie um ambiente virtual na pasta 'env'
+python -m venv env
+
+# Ative o ambiente virtual (Windows e macOS/Linux, respectivamente)
+.\env\Scripts\activate
+# ou
+source env/bin/activate
+
+# Instale todas as bibliotecas necessárias
+pip install -r requirements.txt
+
+```
+
+#### 4. Configure as variáveis de ambiente
+O projeto precisa de algumas chaves e senhas para funcionar. Crie um arquivo chamado .env na raiz do projeto e adicione o seguinte conteúdo, substituindo os valores de exemplo pelos seus.
+```env
+# Arquivo: .env
+
+# Chave secreta do Flask para uso do FlaskWTF/WTForms (pode ser qualquer string longa e aleatória)
+SECRET_KEY='coloque_uma_chave_super_secreta_aqui'
+
+# Chaves do Google reCAPTCHA (se aplicável)
+RECAPTCHA_SITE_KEY='sua_site_key_do_recaptcha'
+RECAPTCHA_SECRET_KEY='sua_secret_key_do_recaptcha'
+
+# String de conexão do seu banco de dados PostgreSQL local
+# No projeto uso uma variável para cada dado e depois junto no arquivo config.py no DATABASE_URL
+DB_HOST='nome_host'
+DB_NAME='nome_db'
+DB_PASSWORD='senha_db'
+DB_PORT=porta_db
+DB_USER='usuario_db'
+
+# Credenciais do SendGrid para API Mail
+SENDGRID_API_KEY='sua_chave_de_api_do_sendgrid'
+MAIL_DEFAULT_SENDER='contato@seu-dominio.com'
+
+# Configuração do Flask
+FLASK_APP='run.py'
+FLASK_ENV='development'
+
+```
+(Nota: a variável DATABASE_URL é construída internamente pelo config.py a partir das variáveis DB_* acima).
+
+#### 5. Configurar o banco de dados
+Abra seu cliente de PostgreSQL e crie um novo banco de dados com o nome que você definiu na DATABASE_URL (ex: trago_noticias_db).
+
+Execute o script de inicialização para criar as tabelas:
+```bash
+flask init-db
+```
+(Nota: Isso assume que seu init_db.py foi configurado como um comando Flask. Se não, o comando pode ser python init_db.py)
+
+#### 6. Rodar a aplicação web
+Com tudo configurado, inicie o servidor de desenvolvimento do Flask:
+```bash
+flask run
+```
+Abra seu navegador e acesse o endereço disponível no terminal, por aqui é http://127.0.0.1:5000. 
+
+### Rodando a tarefa do cron job manualmente
+Para testar o robô que busca notícias e envia e-mails sem esperar o agendamento, abra um novo terminal e ative o ambiente virtual novamente (.\env\Scripts\activate) e execute o comando:
+```bash
+flask initTasks
+```
+Acompanhe a saída no terminal para ver o processo em ação.
+
 
 ---
 
