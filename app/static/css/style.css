@@ -150,12 +150,14 @@ header {
     color: #ffffff;
     border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .form-footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content:space-between;
     margin-top: 15px;
+    align-items: center;
 }
 
 .h4_subtitles {
@@ -329,10 +331,4 @@ header {
     border-radius: 10px;
     margin-top: 15px;
     line-height: 25px;
-}
-
-.advice-google {
-    color: #9b9b9b;
-    text-align: center;
-    font-size: 14px;
 }

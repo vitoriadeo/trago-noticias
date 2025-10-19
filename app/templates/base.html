@@ -22,15 +22,12 @@
     <link rel="icon" href="{{ url_for('static', filename='img/favicon-16x16.png') }}" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
     <header>
-        <hgroup>
-            <br>
             <h1>trago notícias</h1>
-        </hgroup>
     </header>
     <main>
         {% block content %} {% endblock %}
@@ -89,35 +86,12 @@
     </aside>
 
     <footer id="footer">
-        <p class="advice-google">Este site é protegido pelo reCAPTCHA e a
-            <a href="https://policies.google.com/privacy">Política de Privacidade</a> e os
-            <a href="https://policies.google.com/terms">Termos de Serviço</a> do Google se aplicam.
-        </p>
-
         <p class="txtfooter">
             <a href="{{url_for('home.privacy')}}" target="_blank" title="Github">Política de
                 Privacidade</a><br>
             Desenvolvido por <a href="https://github.com/vitoriadeo" target="_blank" title="Github">@vitoriadeo</a>
         </p>
     </footer>
-    <script src="https://www.google.com/recaptcha/api.js?render={{config.RECAPTCHA_SITE_KEY}}"></script>
-    <script>
-        document.getElementById('form_alerts').addEventListener('submit', function (event) {
-
-            event.preventDefault();
-
-            var form = this;
-
-            grecaptcha.ready(function () {
-                grecaptcha.execute('{{config.RECAPTCHA_SITE_KEY}}', { action: 'submit' }).then(function (token) {
-
-                    document.getElementById('recaptcha-response').value = token;
-
-                    form.submit();
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>
