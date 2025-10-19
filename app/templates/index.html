@@ -45,11 +45,10 @@
             </p>
         </div>
         <div class="form-footer">
+            <div class="g-recaptcha" data-sitekey="{{config.RECAPTCHA_SITE_KEY}}"></div>
+            <br />
             {{ form.submit_button }}
         </div>
-
-        <div class="g-recaptcha" data-sitekey="{{config.RECAPTCHA_SITE_KEY}}"></div>
-        <br />
 
         {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}

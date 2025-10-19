@@ -82,8 +82,7 @@
 
     /* BOTÃO CRIAR ALERTA */
     .button {
-        width: 40%;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         border: none;
         padding: 10px;
         background-color: rgb(65, 65, 65);
@@ -93,9 +92,9 @@
 
     /* ÁREA QUE CONTÉM O BOTÃO CRIAR ALERTA */
     .form-footer {
-        display: flex;
+        flex-direction: column;
         justify-content: center;
-        margin-top: 15px;
+        align-items: center;
     }
 
     /* TEXTO FINAL DA PÁGINA */
@@ -235,9 +234,9 @@
 
     /* ÁREA QUE CONTÉM O BOTÃO CRIAR ALERTA */
     .form-footer {
-        display: flex;
+        flex-direction: column;
         justify-content: center;
-        margin-top: 15px;
+        align-items: center;
     }
 
     option {
@@ -246,8 +245,7 @@
 
     /* BOTÃO CRIAR ALERTA */
     .button {
-        width: 35%;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         border-radius: 20px;
     }
 
