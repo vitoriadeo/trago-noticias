@@ -1,63 +1,105 @@
 body {
+    color: rgb(36, 36, 36);
+    font-family: "Arimo", sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
 }
 
+blockquote {
+    background-color: #bbbbbb8a;
+    margin-left: 0px;
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+a {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+mark {
+    border-bottom: 1px solid rgb(100, 148, 237);
+    background-color: transparent;
+    color: rgb(36, 36, 36);
+}
+
 h1 {
+    font-family: "Homenaje", sans-serif;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
     font-size: 3.6rem;
     text-align: center;
     line-height: 8rem;
-    margin: 60px 0 -30px 0;
-
+    margin: 40px 0 -30px 0;
 }
+
+main,
+section,
+footer,
+aside,
+article,
+header {
+    width: 100%;
+}
+
 
 /* SUBTITULO DO SITE */
 #subtitle {
-    font-size: 1.6rem;
-    margin: 10px;
+    font-size: 1.2rem;
+    margin: 20px;
     text-align: center;
-
+    color: rgb(92, 92, 92);
+    font-family: "Arimo", sans-serif;
+    font-weight: 100;
 }
 
 /* DESC DA CAIXA/ÁREA AZUL */
 #description {
     width: 100%;
-    border-radius: 0;
     font-size: 1.2rem;
     padding: 5px 20px;
     line-height: 1.3em;
     text-align: justify;
+    background-color: rgba(96, 152, 255);
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+
+/* ÁREA DO CONTEUDO PRINCIPAL NAS PG PÚBLICAS */
+.content {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 5px 25px;
+    background-color: rgb(245, 245, 245);
+    box-sizing: border-box;
+    color: rgb(75, 75, 75);
+}
+
+.h4_subtitles {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid #c9c9c9;
+    display: inline-block;
 }
 
 /* ÁREA QUE CONTÉM O FORMULÁRIO */
 #form_area {
     width: 100%;
     border-radius: 0;
-    margin: 0;
+    margin-top: 20px;
     padding: 25px 20px;
-}
-
-form {
-    margin: 0;
-    padding: 0;
-}
-
-input,
-select {
-    display: block;
-    font-size: 1.3rem;
-}
-
-label {
-    font-size: 1.5rem;
+    background-color: rgb(245, 245, 245);
+    box-sizing: border-box;
 }
 
 /* ITENS DO FORMULÁRIO */
 .item {
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .item label {
@@ -77,48 +119,32 @@ label {
     color: rgb(92, 92, 92);
 }
 
-/* BOTÃO CRIAR ALERTA */
-.button {
-    font-size: 1.2rem;
-    border: none;
-    padding: 10px;
-    background-color: rgb(65, 65, 65);
-    color: #ffffff;
-    border-radius: 15px;
+/* TEXTO DE AJUDA -FORM */
+.help-text {
+    padding: 0px 0px 10px 0px;
+    font-size: .9rem;
+    color: #999999;
 }
 
 /* ÁREA QUE CONTÉM O BOTÃO CRIAR ALERTA */
 .form-footer {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* TEXTO FINAL DA PÁGINA */
-.txtfooter {
-    text-align: center;
-    padding-bottom: 10px;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: .8rem;
+/* BOTÃO CRIAR ALERTA */
+.button {
     border: none;
+    padding: 10px;
+    background-color: rgb(65, 65, 65);
+    color: #ffffff;
+    border-radius: 5px;
+    text-transform: uppercase;
 }
 
-
-#footer {
-    padding: 10px 20px 0px 20px;
-    box-sizing: border-box;
-    color: rgb(75, 75, 75);
-}
-
-option,
-.option {
-    font-size: 1.2rem;
-    color: rgb(51, 51, 51);
-}
-
-/* MENUS DESKTOP-MOBILE */
+/* SEÇÃO MENU INÍCIO  */
 .menu-desktop {
     display: none;
 }
@@ -127,239 +153,215 @@ option,
     display: block;
 }
 
-/* ÁREA DO CONTEUDO PRINCIPAL NAS PG PÚBLICAS */
-.content {
+#menu-toggle {
+    display: none;
+}
+
+/* MENU DESKTOP */
+nav,
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+li {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+    background-color: rgb(164, 203, 255);
+    list-style-type: none;
+    margin: 5px;
+    align-items: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.menu_title {
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(78, 97, 121);
+    padding-bottom: 10px;
+}
+
+.desc_menu {
+    color: rgb(107, 132, 163);
+    font-size: 14px;
+}
+
+nav li.active {
+    background-color: rgb(233, 233, 233);
+}
+
+
+/* MENU MOBILE  */
+.menu-button-container {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.menu-button {
+    background-color: #333;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.menu-button::before,
+.menu-button::after {
+    background-color: #333;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-button::before {
+    top: -10px;
+}
+
+.menu-button::after {
+    top: 10px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    transform: rotate(45deg);
+    top: 0;
+    background-color: #FFFFFF;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    transform: rotate(-45deg);
+    top: 0;
+    background-color: #FFFFFF;
+}
+
+.menu-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-top: 80px;
+    padding-left: 20px;
+    transform: translateX(-101%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.menu-list li {
+    margin: 0;
+    width: 100%;
+    height: 18%;
+    align-items: center;
+    text-align: left;
+    background-color: transparent;
+    flex: 0;
+    aspect-ratio: 0/0;
+}
+
+.menu-list a {
+    display: inline-block;
+    padding: 5px 0 5px 0;
     font-size: 1.2rem;
-    line-height: 1.6rem;
-    border-radius: 0px;
+    text-transform: uppercase;
+    color: #cccccc;
+    transition: background-color 0.2s ease-in-out;
+    font-optical-sizing: auto;
 }
 
-/* MENSAGEM DE ERRO E SUCESSO AO ENVIAR FORMULÁRIO */
-.confirmation,
+.menu-list a.active {
+    color: #fff;
+    border-bottom: 1px solid #ffffffab;
+
+}
+
+#menu-toggle:checked~.menu-list {
+    transform: translateX(0);
+}
+/* SEÇÃO MENU FIM  */
+
+
+/* TEXTO FINAL DA PÁGINA */
+.txtfooter {
+    text-align: center;
+    font-size: .8rem;
+    font-family: "Roboto Mono", monospace;
+
+}
+
+#footer {
+    padding: 0px 20px 0px 20px;
+    box-sizing: border-box;
+    color: rgb(75, 75, 75);
+}
+
+/* FEEDBACK SUCESSO FORMULÁRIO */
+.confirmation {
+    background-color: #c2ee98;
+    border: 1px solid #aad681;
+    color: #40552d;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 15px;
+    line-height: 25px;
+}
+
+/* FEEDBACK ERRO FORMULÁRIO */
 .error {
-    font-size: 1.3rem;
-    line-height: 1.8rem;
-    margin-top: 30px;
+    background-color: #ee9898;
+    border: 1px solid #d68181;
+    color: #552d2d;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 15px;
+    line-height: 25px;
 }
 
-/* TEXTO DE AJUDA -FORM */
-.help-text {
-    padding: 0px 0px 10px 0px;
-    font-size: .9rem;
-}
 
-
-@media (min-width: 481px) and (max-width: 600px) {
-
-    /* MENUS DESKTOP-MOBILE */
-    .menu-desktop {
-        display: none;
-    }
-
-    .menu-mobile {
-        display: block;
-    }
-
-    html,
-    body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    /* DESC DA CAIXA/ÁREA AZUL */
-    #description {
-        width: 100%;
-        border-radius: 0;
-        font-size: 1.3rem;
-        padding: 5px 20px;
-        line-height: 1.3em;
-    }
+@media (min-width: 601px) {
 
     h1 {
-        text-align: center;
-        font-size: 4.5rem;
-        margin: 60px 0 -20px 0;
+        font-size: 3.75rem;
+        margin: 0px 0 -30px 0;
     }
 
     /* SUBTITULO DO SITE */
     #subtitle {
-        font-size: 1.5rem;
-        text-align: center;
-        margin: 50px;
-    }
-
-    /* ÁREA QUE CONTÉM O FORMULÁRIO */
-    #form_area {
-        width: 100%;
-        border-radius: 0;
-        margin: 0;
-        padding: 25px 20px;
-        font-size: 1.6rem;
-    }
-
-    input,
-    select {
-        display: block;
-        font-size: 1.6rem;
-    }
-
-    /* ITENS DO FORMULÁRIO */
-    .item {
-        display: block;
-        margin-bottom: 40px;
-    }
-
-    .item label {
-        display: block;
-        margin-bottom: 15px;
-    }
-
-    .item .input,
-    .item .select {
-        width: 100%;
-        box-sizing: border-box;
-        background-color: rgb(236, 236, 236);
-        border: none;
-        padding: 8px;
-        border-bottom: 1px solid rgb(148, 148, 148);
-        border-radius: 3px;
-        color: rgb(92, 92, 92);
-    }
-
-    /* ÁREA QUE CONTÉM O BOTÃO CRIAR ALERTA */
-    .form-footer {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    option {
-        font-size: 1.5rem;
-    }
-
-    /* BOTÃO CRIAR ALERTA */
-    .button {
-        font-size: 1.4rem;
-        border-radius: 20px;
-    }
-
-    /* TEXTO FINAL DA PÁGINA */
-    .txtfooter {
-        text-align: center;
-        padding-bottom: 40px;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-        font-size: .8rem;
-        border: none;
-    }
-
-    #footer {
-        padding: 10px 20px 0px 20px;
-        background-color: rgb(245, 245, 245);
-        box-sizing: border-box;
-        color: rgb(75, 75, 75);
-    }
-
-    /* ÁREA DO CONTEUDO PRINCIPAL NAS PG PÚBLICAS */
-    .content {
-        font-size: 1.3rem;
-        line-height: 1.7rem;
-    }
-
-    /* MENSAGEM DE ERRO E SUCESSO AO ENVIAR FORMULÁRIO */
-    .confirmation,
-    .error {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        margin-top: 30px;
-    }
-
-    /* TEXTO DE AJUDA -FORM */
-    .help-text {
-        padding: 0px 0px 10px 0px;
         font-size: 1.2rem;
     }
-}
 
-@media (min-width: 601px) {
-    body {
-        background-color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        color: rgb(36, 36, 36);
-        font-family: "Arimo", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    blockquote {
-        background-color: #bbbbbb8a;
-        margin-left: 0px;
-        width: 100%;
-        padding: 5px 10px;
-        box-sizing: border-box;
+    /* DESC DA CAIXA/ÁREA AZUL */
+    #description {
+        padding: 1px 15px;
         border-radius: 5px;
-    }
-
-    a {
-        color: cornflowerblue;
-        text-decoration: none;
-    }
-
-    mark {
-        border-bottom: 1px solid rgb(100, 148, 237);
-        background-color: transparent;
-        color: rgb(36, 36, 36);
-    }
-
-    h1 {
-        color: rgb(51, 51, 51);
-        font-family: "Homenaje", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 60px;
-    }
-
-    /* MENU DESKTOP */
-    nav,
-    ul {
-        display: flex;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        width: 100%;
-    }
-
-    li {
-        flex: 1;
-        aspect-ratio: 1 / 1;
-        justify-content: center;
-        background-color: rgb(164, 203, 255);
-        list-style-type: none;
-        margin: 5px;
-        align-items: center;
-        border-radius: 15px;
-        box-sizing: border-box;
-        padding: 15px;
-    }
-
-    .menu_title {
-        font-weight: bolder;
-        font-size: 20px;
-        color: rgb(78, 97, 121);
-        padding-bottom: 10px;
-    }
-
-    .desc_menu {
-        color: rgb(107, 132, 163);
-        font-size: 14px;
-    }
-
-    nav li.active {
-        background-color: rgb(233, 233, 233);
+        line-height: 1.4rem;
+        font-size: 1.1rem;
     }
 
     main,
@@ -368,43 +370,25 @@ option,
     aside,
     article,
     header {
-        margin: 30px auto;
+        margin: 10px auto 30px auto;
         max-width: 600px;
         width: 100%;
     }
 
-    .txtfooter {
-        text-align: center;
-        color: #9b9b9b;
-        font-family: "Roboto Mono", monospace;
-        font-optical-sizing: auto;
-        text-transform: uppercase;
-        font-size: .8rem;
-    }
-
+    /* ÁREA DO CONTEUDO PRINCIPAL NAS PG PÚBLICAS */
     .content {
-        padding: 5px 25px;
-        border-radius: 15px;
-        background-color: rgb(245, 245, 245);
-        box-sizing: border-box;
-        color: rgb(75, 75, 75);
         line-height: 24px;
+        border-radius: 5px;
+        font-size: 1.0rem;
+        box-sizing: border-box;
     }
 
-    /* ITENS DO FORMUL */
+    /* ITENS DO FORMULÁRIO */
     .item {
         display: flex;
         align-items: center;
         margin-bottom: 12px;
         flex-wrap: wrap;
-    }
-
-    /* TEXTO DE AJUDA -FORM */
-    .help-text {
-        width: 100%;
-        padding: 0px 0px 10px 190px;
-        color: #999999;
-        font-size: 13px;
     }
 
     .item label {
@@ -416,205 +400,45 @@ option,
     .item .input,
     .item .select {
         flex: 2;
+    }
+
+    /* TEXTO DE AJUDA -FORM */
+    .help-text {
         width: 100%;
-        box-sizing: border-box;
-        background-color: rgb(236, 236, 236);
-        border: none;
-        padding: 8px;
-        border-bottom: 1px solid rgb(148, 148, 148);
-        border-radius: 3px;
-        color: rgb(51, 51, 51);
+        padding: 0px 0px 10px 190px;
+        font-size: .8rem;
     }
 
-
-    .button {
-        border: none;
-        padding: 10px;
-        background-color: rgb(65, 65, 65);
-        color: #ffffff;
-        border-radius: 5px;
-        cursor: pointer;
-        text-transform: uppercase;
-    }
-
+    /* ÁREA QUE CONTÉM O BOTÃO CRIAR ALERTA */
     .form-footer {
         display: flex;
         justify-content: space-between;
-        margin-top: 15px;
         align-items: center;
+        flex-direction: row;
     }
 
-    .h4_subtitles {
-        margin-bottom: 0;
-        padding-bottom: 0;
-        border-bottom: 1px solid #c9c9c9;
-        display: inline-block;
+    /* BOTÃO CRIAR ALERTA */
+    .button {
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
     }
 
-    #description {
-        background-color: rgba(96, 152, 255);
-        color: rgb(255, 255, 255);
-        padding: 5px 15px;
-        border-radius: 15px;
-        line-height: 20px;
-        box-sizing: border-box;
+    /* MENUs  */
+    .menu-desktop {
+        display: block;
     }
-
-    #subtitle {
-        color: rgb(92, 92, 92);
-        font-size: 20px;
-        font-family: "Arimo", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-weight: normal;
-    }
-
-    #form_area {
-        padding: 15px 15px;
-        border-radius: 15px;
-        background-color: rgb(245, 245, 245);
-        box-sizing: border-box;
-        color: rgb(75, 75, 75);
-        margin-top: 20px !important;
-    }
-
-    /* === MENU MOBILE === */
 
     .menu-mobile {
         display: none;
     }
 
-    #menu-toggle {
-        display: none;
-    }
-
-    /* Container do botão do menu */
-    .menu-button-container {
-        display: block;
-        position: absolute;
-        top: 40px;
-        left: 30px;
-        height: 25px;
-        width: 30px;
-        cursor: pointer;
-        z-index: 101;
-    }
-
-    .menu-button {
-        background-color: #333;
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 4px;
-        border-radius: 2px;
-        transition: background-color 0.2s ease-in-out;
-    }
-
-    .menu-button::before,
-    .menu-button::after {
-        background-color: #333;
-        content: '';
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 2px;
-        transition: all 0.2s ease-in-out;
-    }
-
-    .menu-button::before {
-        top: -10px;
-    }
-
-    .menu-button::after {
-        top: 10px;
-    }
-
-    #menu-toggle:checked+.menu-button-container .menu-button {
-        background-color: rgba(0, 0, 0, 0);
-    }
-
-    #menu-toggle:checked+.menu-button-container .menu-button::before {
-        transform: rotate(45deg);
-        top: 0;
-        background-color: #FFFFFF;
-    }
-
-    #menu-toggle:checked+.menu-button-container .menu-button::after {
-        transform: rotate(-45deg);
-        top: 0;
-        background-color: #FFFFFF;
-    }
-
-    /* Estilos da lista de links (o menu que aparece) */
-    .menu-list {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 70%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0);
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding-top: 80px;
-        padding-left: 20px;
-        transform: translateX(-101%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 100;
-    }
-
-    .menu-list li {
-        margin: 0;
-        width: 100%;
-        height: 18%;
-        align-items: center;
-        text-align: left;
-        background-color: transparent;
-        flex: 0;
-        aspect-ratio: 0/0;
-    }
-
-    .menu-list a {
-        display: inline-block;
-        padding: 5px 0 5px 0;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        color: #cccccc;
-        transition: background-color 0.2s ease-in-out;
-        font-optical-sizing: auto;
-    }
-
-    .menu-list a.active {
-        color: #fff;
-        border-bottom: 1px solid #ffffffab;
-
-    }
-
-    #menu-toggle:checked~.menu-list {
-        transform: translateX(0);
-    }
-
-    .confirmation {
-        background-color: #c2ee98;
-        border: 1px solid #aad681;
-        color: #40552d;
-        padding: 0px 15px;
-        box-sizing: border-box;
-        border-radius: 10px;
-        margin-top: 15px;
-        line-height: 25px;
-    }
-
+    /* MENSAGEM DE ERRO E SUCESSO AO ENVIAR FORMULÁRIO */
+    .confirmation,
     .error {
-        background-color: #ee9898;
-        border: 1px solid #d68181;
-        color: #552d2d;
-        padding: 0px 15px;
-        box-sizing: border-box;
-        border-radius: 10px;
-        margin-top: 15px;
-        line-height: 25px;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        margin-top: 30px;
     }
 
 }
