@@ -1,6 +1,5 @@
 from app.database_manager import get_db
 from .web_scraper import coleta
-from .filtro import carrega_sites_noticias, filtragem
 from .sender_email import send_email
 from datetime import timedelta, timezone, datetime
 import datetime

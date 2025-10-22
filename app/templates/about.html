@@ -15,43 +15,39 @@
     <p> </p>
     <h3>Funcionamento</h3>
 
-    <p>
     <h4>1. Cadastro do termo de interesse</h4>
-    O usuário acessa o sistema e cadastra um termo que deseja monitorar. Esse termo precisa ser um pouco específico para
-    não gerar alertas desnecessários. Verifique o <a href="{{url_for('about.guide')}}">guia de uso</a> para cadastrar
-    corretamente.</p>
+    <p>O usuário acessa o sistema e cadastra um termo que deseja monitorar. Esse termo precisa ser um pouco específico
+        para
+        não gerar alertas desnecessários. Verifique o <a href="{{url_for('about.guide')}}">guia de uso</a> para
+        cadastrar
+        corretamente.</p>
 
 
-    <p>
     <h4>2. Armazenamento do termo</h4>
-    Após o cadastro, o termo é salvo em um banco de dados. Esse banco de dados organiza todos os termos cadastrados
+    <p>Após o cadastro, o termo é salvo em um banco de dados. Esse banco de dados organiza todos os termos cadastrados
     e
     permite que o sistema faça buscas diariamente de forma eficiente.</p>
 
 
-    <p>
     <h4>3. Busca automática por notícias</h4>
-    O sistema realiza buscas diárias na internet, consultando sites de notícias e <a
-        href="{{url_for('about.source')}}">fontes confiáveis</a> para identificar novas publicações que contenham o
+    <p>O sistema realiza buscas diárias na internet, consultando sites de notícias para identificar novas publicações que contenham o
     termo cadastrado.</p>
 
 
-    <p>
     <h4>4. Filtragem e organização das notícias</h4>
-    As notícias encontradas são processadas, verificando duplicações e relevância, para garantir que o usuário
+    <p>As notícias encontradas são processadas, verificando duplicações e relevância, para garantir que o usuário
     receba apenas informações úteis e atualizadas sobre o tema. Se você cadastrar um termo hoje, por exemplo, pode
     receber
     informações sobre esse termo a partir de amanhã, se houver novidades.</p>
 
 
-    <p>
     <h4>5. Envio de alertas</h4>
-    Sempre que uma nova notícia é encontrada, o sistema envia um alerta ao usuário. Dessa forma, o usuário se mantém
+    <p>Sempre que uma nova notícia é encontrada, o sistema envia um alerta ao usuário. Dessa forma, o usuário se mantém
     atualizado sem precisar procurar manualmente.</p>
 
-    <p>
+    
     <h4>6. Ciclo de vida do termo</h4>
-    Os termos possuem um ciclo de vida definido. Assim que você recebe alguma novidade por email sobre ele, esse
+    <p>Os termos possuem um ciclo de vida definido. Assim que você recebe alguma novidade por email sobre ele, esse
     termo é desativado. Isso significa que você não receberá mais informações sobre ele. Para continuar monitorando, é
     necessário fazer um novo cadastro do termo.</p>
 
