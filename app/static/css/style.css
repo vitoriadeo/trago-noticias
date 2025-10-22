@@ -436,7 +436,7 @@ nav li.active {
     /* MENSAGEM DE ERRO E SUCESSO AO ENVIAR FORMULÁRIO */
     .confirmation,
     .error {
-        font-size: 1.3rem;
+        font-size: 1.0rem;
         line-height: 1.8rem;
         margin-top: 30px;
     }
