@@ -2,18 +2,13 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Sistema web para monitoramento de assuntos" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Sistema web para monitoramento de assuntos">
     <meta name="keywords"
-        content="sistema de alertas, sistema de monitoramento de web, alertas para assuntos específicos" />
+        content="sistema de alertas, sistema de monitoramento de web, alertas para assuntos específicos">
     <title>{% block title %} Trago Notícias {% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -27,7 +22,7 @@
 
 <body>
     <header>
-            <h1>trago notícias</h1>
+        <h1>trago notícias</h1>
     </header>
     <main>
         {% block content %} {% endblock %}
@@ -87,9 +82,7 @@
 
     <footer id="footer">
         <p class="txtfooter">
-            <a href="{{url_for('home.privacy')}}" target="_blank" title="Github">Política de
-                Privacidade</a><br>
-            Desenvolvido por <a href="https://github.com/vitoriadeo" target="_blank" title="Github">@vitoriadeo</a>
+            © 2025 Trago Notícias, <a href="https://github.com/vitoriadeo/trago-noticias" target="_blank">Github</a>.
         </p>
     </footer>
 </body>

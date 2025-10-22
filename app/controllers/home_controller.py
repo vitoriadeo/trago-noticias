@@ -1,6 +1,5 @@
 from flask import Blueprint, render_template, request, flash
 from app.form import Form
-from ..services.filtro import carrega_sites_noticias
 from ..services import alert_service
 
 import requests
@@ -64,11 +63,6 @@ def about():
 @bp_about.route("/about/guide")
 def guide():
     return render_template("guide.html")
-
-@bp_about.route("/about/source")
-def source():
-    sites = carrega_sites_noticias()
-    return render_template("source.html", sites=sites)
 
 @bp.route("/privacy")
 def privacy():

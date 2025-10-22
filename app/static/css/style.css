@@ -1,14 +1,10 @@
-/*   STYLE.CSS - Estilização geral do site web 
-*/
-
 body {
-    background-color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
     color: rgb(36, 36, 36);
     font-family: "Arimo", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
 blockquote {
@@ -32,11 +28,133 @@ mark {
 }
 
 h1 {
-    color: rgb(51, 51, 51);
     font-family: "Homenaje", sans-serif;
     font-weight: 400;
-    font-style: normal;
-    font-size: 60px;
+    color: rgb(51, 51, 51);
+    font-size: 3.6rem;
+    text-align: center;
+    line-height: 8rem;
+    margin: 40px 0 -30px 0;
+}
+
+main,
+section,
+footer,
+aside,
+article,
+header {
+    width: 100%;
+}
+
+
+/* SUBTITULO DO SITE */
+#subtitle {
+    font-size: 1.2rem;
+    margin: 20px;
+    text-align: center;
+    color: rgb(92, 92, 92);
+    font-family: "Arimo", sans-serif;
+    font-weight: 100;
+}
+
+/* DESC DA CAIXA/ÁREA AZUL */
+#description {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 5px 20px;
+    line-height: 1.3em;
+    text-align: justify;
+    background-color: rgba(96, 152, 255);
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+
+/* ÁREA DO CONTEUDO PRINCIPAL NAS PG PÚBLICAS */
+.content {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 5px 25px;
+    background-color: rgb(245, 245, 245);
+    box-sizing: border-box;
+    color: rgb(75, 75, 75);
+}
+
+.h4_subtitles {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid #c9c9c9;
+    display: inline-block;
+}
+
+/* ÁREA QUE CONTÉM O FORMULÁRIO */
+#form_area {
+    width: 100%;
+    border-radius: 0;
+    margin-top: 20px;
+    padding: 25px 20px;
+    background-color: rgb(245, 245, 245);
+    box-sizing: border-box;
+}
+
+/* ITENS DO FORMULÁRIO */
+.item {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.item label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.item .input,
+.item .select {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(236, 236, 236);
+    border: none;
+    padding: 8px;
+    border-bottom: 1px solid rgb(148, 148, 148);
+    border-radius: 3px;
+    color: rgb(92, 92, 92);
+}
+
+/* TEXTO DE AJUDA -FORM */
+.help-text {
+    padding: 0px 0px 10px 0px;
+    font-size: .9rem;
+    color: #999999;
+}
+
+/* ÁREA QUE CONTÉM O BOTÃO CRIAR ALERTA */
+.form-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BOTÃO CRIAR ALERTA */
+.button {
+    border: none;
+    padding: 10px;
+    background-color: rgb(65, 65, 65);
+    color: #ffffff;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+/* SEÇÃO MENU INÍCIO  */
+.menu-desktop {
+    display: none;
+}
+
+.menu-mobile {
+    display: block;
+}
+
+#menu-toggle {
+    display: none;
 }
 
 /* MENU DESKTOP */
@@ -78,133 +196,8 @@ nav li.active {
     background-color: rgb(233, 233, 233);
 }
 
-main,
-section,
-footer,
-aside,
-article,
-header {
-    margin: 30px auto;
-    max-width: 600px;
-    width: 100%;
-}
 
-.txtfooter {
-    text-align: center;
-    color: #9b9b9b;
-    font-family: "Roboto Mono", monospace;
-    font-optical-sizing: auto;
-    text-transform: uppercase;
-    font-size: .8rem;
-}
-
-.content {
-    padding: 5px 25px;
-    border-radius: 15px;
-    background-color: rgb(245, 245, 245);
-    box-sizing: border-box;
-    color: rgb(75, 75, 75);
-    line-height: 24px;
-}
-
-/* ITENS DO FORMUL */
-.item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-    flex-wrap: wrap;
-}
-
-/* TEXTO DE AJUDA -FORM */
-.help-text {
-    width: 100%;
-    padding: 0px 0px 10px 190px;
-    color: #999999;
-    font-size: 13px;
-}
-
-.item label {
-    flex: 1;
-    margin-right: 5px;
-    text-align: left;
-}
-
-.item .input,
-.item .select {
-    flex: 2;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: rgb(236, 236, 236);
-    border: none;
-    padding: 8px;
-    border-bottom: 1px solid rgb(148, 148, 148);
-    border-radius: 3px;
-    color: rgb(51, 51, 51);
-}
-
-
-.button {
-    border: none;
-    padding: 10px;
-    background-color: rgb(65, 65, 65);
-    color: #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-.form-footer {
-    display: flex;
-    justify-content:space-between;
-    margin-top: 15px;
-    align-items: center;
-}
-
-.h4_subtitles {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: 1px solid #c9c9c9;
-    display: inline-block;
-}
-
-#description {
-    background-color: rgba(96, 152, 255);
-    color: rgb(255, 255, 255);
-    padding: 5px 15px;
-    border-radius: 15px;
-    line-height: 20px;
-    box-sizing: border-box;
-}
-
-#subtitle {
-    color: rgb(92, 92, 92);
-    font-size: 20px;
-    font-family: "Arimo", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: normal;
-}
-
-#form_area {
-    padding: 15px 15px;
-    border-radius: 15px;
-    background-color: rgb(245, 245, 245);
-    box-sizing: border-box;
-    color: rgb(75, 75, 75);
-    margin-top: 20px !important;
-}
-
-/* === MENU MOBILE === */
-
-.menu-mobile {
-    display: none;
-}
-
-#menu-toggle {
-    display: none;
-}
-
-/* Container do botão do menu */
+/* MENU MOBILE  */
 .menu-button-container {
     display: block;
     position: absolute;
@@ -262,7 +255,6 @@ header {
     background-color: #FFFFFF;
 }
 
-/* Estilos da lista de links (o menu que aparece) */
 .menu-list {
     position: fixed;
     top: 0;
@@ -310,7 +302,24 @@ header {
 #menu-toggle:checked~.menu-list {
     transform: translateX(0);
 }
+/* SEÇÃO MENU FIM  */
 
+
+/* TEXTO FINAL DA PÁGINA */
+.txtfooter {
+    text-align: center;
+    font-size: .8rem;
+    font-family: "Roboto Mono", monospace;
+
+}
+
+#footer {
+    padding: 0px 20px 0px 20px;
+    box-sizing: border-box;
+    color: rgb(75, 75, 75);
+}
+
+/* FEEDBACK SUCESSO FORMULÁRIO */
 .confirmation {
     background-color: #c2ee98;
     border: 1px solid #aad681;
@@ -322,6 +331,7 @@ header {
     line-height: 25px;
 }
 
+/* FEEDBACK ERRO FORMULÁRIO */
 .error {
     background-color: #ee9898;
     border: 1px solid #d68181;
@@ -331,4 +341,104 @@ header {
     border-radius: 10px;
     margin-top: 15px;
     line-height: 25px;
+}
+
+
+@media (min-width: 601px) {
+
+    h1 {
+        font-size: 3.75rem;
+        margin: 0px 0 -30px 0;
+    }
+
+    /* SUBTITULO DO SITE */
+    #subtitle {
+        font-size: 1.2rem;
+    }
+
+    /* DESC DA CAIXA/ÁREA AZUL */
+    #description {
+        padding: 1px 15px;
+        border-radius: 5px;
+        line-height: 1.4rem;
+        font-size: 1.1rem;
+    }
+
+    main,
+    section,
+    footer,
+    aside,
+    article,
+    header {
+        margin: 10px auto 30px auto;
+        max-width: 600px;
+        width: 100%;
+    }
+
+    /* ÁREA DO CONTEUDO PRINCIPAL NAS PG PÚBLICAS */
+    .content {
+        line-height: 24px;
+        border-radius: 5px;
+        font-size: 1.0rem;
+        box-sizing: border-box;
+    }
+
+    /* ITENS DO FORMULÁRIO */
+    .item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+    }
+
+    .item label {
+        flex: 1;
+        margin-right: 5px;
+        text-align: left;
+    }
+
+    .item .input,
+    .item .select {
+        flex: 2;
+    }
+
+    /* TEXTO DE AJUDA -FORM */
+    .help-text {
+        width: 100%;
+        padding: 0px 0px 10px 190px;
+        font-size: .8rem;
+    }
+
+    /* ÁREA QUE CONTÉM O BOTÃO CRIAR ALERTA */
+    .form-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    /* BOTÃO CRIAR ALERTA */
+    .button {
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    /* MENUs  */
+    .menu-desktop {
+        display: block;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+
+    /* MENSAGEM DE ERRO E SUCESSO AO ENVIAR FORMULÁRIO */
+    .confirmation,
+    .error {
+        font-size: 1.0rem;
+        line-height: 1.8rem;
+        margin-top: 30px;
+    }
+
 }
