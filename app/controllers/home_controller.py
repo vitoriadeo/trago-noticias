@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, flash
 from app.form import Form
 from ..services import alert_service
+import bleach
 
 import requests
 
@@ -18,10 +19,10 @@ def index():
     if form.validate_on_submit():
         try:
             # WTFORMS
-            name = form.name.data
-            email = form.email.data
-            word = form.word.data
-            frequency = form.frequency.data
+            name = bleach.clean(form.name.data, tags=[], strip=True)
+            email = bleach.clean(form.email.data, tags=[], strip=True)
+            word = bleach.clean(form.word.data, tags=[], strip=True)
+            frequency = bleach.clean(form.frequency.data, tags=[], strip=True)
 
             # GOOGLE RECAPTCHA V3
             recaptcha_token = request.form.get("g-recaptcha-response")
