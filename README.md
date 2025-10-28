@@ -35,6 +35,7 @@ Este projeto foi construído utilizando as seguintes tecnologias e plataformas:
 ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/postgresql-4169e1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![Github Actions](https://img.shields.io/badge/-GitHub%20Actions-333333?style=for-the-badge&logo=github-actions)
 
 ---
 
@@ -143,7 +144,6 @@ trago-noticias/
 │ ├── config.py
 │ ├── database_manager.py
 │ ├── form.py
-│ ├── allowlist.txt
 │ ├── controllers/
 │ │   ├── __init__.py
 │ │   └── home_controller.py
@@ -151,7 +151,6 @@ trago-noticias/
 │ │   ├── web_scraper.py
 │ │   ├── alert_service.py
 │ │   ├── sender_email.py
-│ │   └── filtro.py
 │ ├── models/
 │ │   └── __init__.py
 │ ├── templates/
