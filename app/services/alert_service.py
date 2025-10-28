@@ -1,8 +1,9 @@
 from app.database_manager import get_db
 from .web_scraper import coleta
-from .sender_email import send_email
+from .sender_email import send_email, send_error_mail
 from datetime import timedelta, timezone, datetime
-import datetime
+import datetime, traceback
+
 
 # FUNÇÃO PRINCIPAL.
 # O EMAIL ADD AO FORMULÁRIO JÁ EXISTE?
@@ -97,7 +98,10 @@ def process_alerts():
                 print(f">> {quantidade} notícias novas encontradas.")
 
                 send_email(nome=nome, email=email, termo=termo, noticias=news_to_send)
-                cursor.execute("update alerta set status_alerta = false where id_alerta = %s", (id,))
+                cursor.execute(
+                    "update alerta set status_alerta = false where id_alerta = %s",
+                    (id,),
+                )
             else:
                 print(">> Nada novo foi encontrado hoje.")
 
@@ -106,7 +110,15 @@ def process_alerts():
         db.commit()
     except Exception as e:
         db.rollback()
+
+        error_details = traceback.format_exc()
+        send_error_mail(
+            the_error=error_details,
+            function_context="process_alerts() in alert_service",
+        )
+
         print(f"Erro: {e}")
         raise e
+
     finally:
         cursor.close()
