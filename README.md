@@ -151,6 +151,7 @@ trago-noticias/
 │ │   ├── web_scraper.py
 │ │   ├── alert_service.py
 │ │   ├── sender_email.py
+│ │   ├── ping_to_db.py
 │ ├── models/
 │ │   └── __init__.py
 │ ├── templates/
@@ -175,6 +176,7 @@ trago-noticias/
 │       └── links_conteudos.txt
 ├── run.py
 ├── requirements.txt
+├── run.log
 ├── .cz.toml
 ├── init_db.py
 ├── README.md
