@@ -13,6 +13,13 @@
 
 - **run.py**: Remove debug mode from app.run()
 
+## v1.2.0 (2025-11-21)
+
+### Feat
+
+- **ping-to-db**: adicionar função para manter db acordado
+- **logging**: configurar modulo de logging
+
 ## v2.0.0 (2025-11-21)
 
 ### BREAKING CHANGE
