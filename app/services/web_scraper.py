@@ -11,7 +11,7 @@ def coleta(termo):
     print(f"Buscando novidades sobre {termo}...")
 
     try:
-        resposta = requests.get(f'https://news.google.com/search?q={termo}&hl=pt-BR&gl=BR&ceid=BR%3Apt-419')
+        resposta = requests.get(f'https://news.google.com/search?q=intitle:{termo}&hl=pt-BR&gl=BR&ceid=BR%3Apt-419')
         resposta.raise_for_status()
 
         sopa = BeautifulSoup(resposta.text, "html.parser")
