@@ -13,6 +13,17 @@
 
 - **run.py**: Remove debug mode from app.run()
 
+## v1.2.1 (2025-11-27)
+
+### Fix
+
+- **intitle-param**: adicionar novo paramêtro para url de noticias
+- **run-file**: corrigir erro na config no logging
+
+### Refactor
+
+- **gitignore**: atualizar gitignore
+
 ## v1.2.0 (2025-11-21)
 
 ### Feat
