@@ -15,7 +15,7 @@ def coleta(termo):
         resposta.raise_for_status()
 
         sopa = BeautifulSoup(resposta.text, "html.parser")
-        amontoado_html = sopa.find_all("article", limit=5) #div class m5k28 em funcionamento data 14/09/2025
+        amontoado_html = sopa.find_all("div", class_="IFHyqb DeXSAc", limit=5) #div class IFHyqb DeXSAc em funcionamento data 08/01/2026
 
         for noticia in amontoado_html:
             tag_a = noticia.find('a')
@@ -46,3 +46,5 @@ def coleta(termo):
     except requests.exceptions.RequestException as e:
         print(f"LOG - Erro de conexão: {e}")
         return None
+
+print(coleta("banana"))
