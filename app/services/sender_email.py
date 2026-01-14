@@ -1,18 +1,18 @@
 import os
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
+import resend
+
 
 def send_email(nome, email, termo, noticias):
-    remetente = os.environ.get('MAIL_DEFAULT_SENDER')
+    remetente = os.environ.get("MAIL_DEFAULT_SENDER")
     remetente_nome = "Trago Notícias"
     destinatario = email
-    api_key = os.environ.get('SENDGRID_API_KEY')
+    api_key = os.environ.get("RESEND_API_KEY")
 
     lista_noticias = []
     for noticia in noticias:
-        titulo = noticia.get('Titulo', 'Sem titulo')
-        link = noticia.get('Link completo', '#')
-        fonte = noticia.get('Fonte', 'Fonte desconhecida')
+        titulo = noticia.get("Titulo", "Sem titulo")
+        link = noticia.get("Link completo", "#")
+        fonte = noticia.get("Fonte", "Fonte desconhecida")
         item_html = f"<li><a href='{link}' target='_blank'>{titulo}</a> ({fonte})</li>"
         lista_noticias.append(item_html)
 
@@ -32,29 +32,32 @@ def send_email(nome, email, termo, noticias):
         <small>Você está recebendo esse email porque se cadastrou para receber um alerta sobre {termo} no site <a href="https://tragonoticias.site/" target="_blank">Trago Noticias</a>. Caso queira cancelar, basta responder esse email informando que deseja a retirada dos seus dados do nosso banco de dados.</small>
     """
 
-    message = Mail(
-        from_email=f"{remetente_nome} <{remetente}>",
-        to_emails=destinatario,
-        subject=f"Trago Notícias: Novidades sobre '{termo}'",
-        html_content=html_content
-    )
-
     try:
-        sg = SendGridAPIClient(api_key)
-        response = sg.send(message)
-        print(f">> Email sobre o alerta {termo} enviado para [{nome} - {destinatario}] | status code: {response.status_code}")
+        params = {
+            "from": f"{remetente_nome} <{remetente}>",
+            "to": destinatario,
+            "subject": f"Trago Notícias: Novidades sobre '{termo}'",
+            "html": html_content,
+            "reply_to": remetente,
+        }
+
+        response = resend.Emails.send(params)
+
+        print(
+            f">> Email sobre o alerta {termo} enviado para [{nome} - {destinatario}] | status code: {response}"
+        )
         return True, print("Email enviado com sucesso!")
-    
+
     except Exception as e:
         print(f"LOG EMAIL: {e}")
         return False, print(f"Ocorreu um erro ao enviar o email: {e}")
-    
+
 
 def send_error_mail(the_error, function_context):
-    remetente = os.environ.get('MAIL_DEFAULT_SENDER')
+    remetente = os.environ.get("MAIL_DEFAULT_SENDER")
     remetente_nome = "🚨 ERRO - TN"
-    destinatario = os.environ.get('ADMIN_EMAIL')
-    api_key = os.environ.get('SENDGRID_API_KEY')
+    destinatario = os.environ.get("ADMIN_EMAIL")
+    api_key = os.environ.get("RESEND_API_KEY")
 
     html_content = f"""
         <h3>Falha na aplicação</h3>
@@ -63,19 +66,20 @@ def send_error_mail(the_error, function_context):
         <pre>{the_error}</pre>
     """
 
-    message = Mail(
-        from_email=f"{remetente_nome} <{remetente}>",
-        to_emails=destinatario,
-        subject=f"ERRO - TN ({function_context})",
-        html_content=html_content
-    )
-
     try:
-        sg = SendGridAPIClient(api_key)
-        response = sg.send(message)
-        print(f">> Email de erro enviado para [{destinatario}] | status code: {response.status_code}")
+        resend.Emails.send(
+            {
+                "from": f"{remetente_nome} <{remetente}>",
+                "to": destinatario,
+                "subject": f"ERRO - TN ({function_context})",
+                "html": html_content,
+            }
+        )
+
+        print(
+            f">> Email de erro enviado para [{destinatario}]"
+        )
         return True
     except Exception as e:
         print(f"LOG EMAIL ERROR: {e}")
         return False
-
