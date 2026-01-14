@@ -46,5 +46,3 @@ def coleta(termo):
     except requests.exceptions.RequestException as e:
         print(f"LOG - Erro de conexão: {e}")
         return None
-
-print(coleta("banana"))
