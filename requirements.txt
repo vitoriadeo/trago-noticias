@@ -27,6 +27,7 @@ Pygments==2.19.2
 python-dotenv==1.1.1
 python-http-client==3.3.7
 requests==2.32.5
+resend==2.19.0
 sendgrid==6.12.5
 soupsieve==2.8
 typing_extensions==4.15.0
