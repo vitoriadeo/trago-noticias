@@ -36,7 +36,7 @@ jobs:
 
           # Secrets do E-mail e App
           MAIL_DEFAULT_SENDER: ${{ secrets.MAIL_DEFAULT_SENDER }}
-          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
           
           # Secrets do reCAPTCHA
